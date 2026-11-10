@@ -1,6 +1,6 @@
-# The Planet We Are Missing
+# The Planet With No Sun
 
-A 3D animated documentary short about super-Earths, made in plain Three.js with Vite and TypeScript. It has a cute toon look and Luna as the host.
+A 3D animated documentary short about rogue planets, made in plain Three.js with Vite and TypeScript. It's the second episode in the Luna series: same toon look, same host, same rocket. It is a darker episode: Luna's flashlight is the main warm light. It's drawn in code in her hand and drives a real `THREE.SpotLight` plus a soft visible cone.
 
 ## Quick start (Windows, PowerShell or cmd)
 
@@ -8,8 +8,8 @@ A 3D animated documentary short about super-Earths, made in plain Three.js with 
 cd super-earth
 npm install
 npm run dev                      # live preview at http://localhost:5173
-npm run still -- 142.6 vertical  # one PNG frame in out/stills/
-npm run render:all               # out/the-planet-we-are-missing_vertical.mp4 + _wide.mp4
+npm run still -- 93.3 vertical   # one PNG frame in out/stills/
+npm run render:all               # out/the-planet-with-no-sun_vertical.mp4 + _wide.mp4
 ```
 
 `npm install` downloads Chrome for Puppeteer and a static ffmpeg build through `ffmpeg-static`. To use your own copies instead:
@@ -31,9 +31,9 @@ Preview controls: play/pause, a seek bar (it also reaches the silent 1.5 s tail)
 ## How it works
 
 * **One timeline function.** `render(t)` in `src/main.ts` draws the frame for `t` seconds into the audio. All motion is a pure function of `t`: springs, hops, wobble, particles and captions. Randomness is seeded (`src/engine/math.ts`). The preview calls `render(audio.currentTime)`, and the renderer calls `render(i / 30)` for every frame. The same `t` always gives the same frame.
-* **The audio sets the timing.** `src/timeline.ts` lists 83 anchor phrases: 22 scene starts plus every gag, reaction and fact. They are fuzzy-matched in order against the word timings in `src/data/transcript.json`. A scene runs from its anchor to the next scene's anchor. If an anchor isn't found, it is placed proportionally between its neighbours, with a warning on the console and in the timing report. Gags key off single words with `wordAfter()`, for example the "go" words in "go, go, go".
+* **The audio sets the timing.** `src/timeline.ts` lists 70 anchor phrases: 22 scene starts plus every gag, reaction and effect. They are fuzzy-matched in order against the word timings in `src/data/transcript.json`. A scene runs from its anchor to the next scene's anchor. If an anchor isn't found, it is placed proportionally between its neighbours, with a warning on the console and in the timing report. Gags key off single words with `wordAfter()`, for example the "go" words in "go, go, go".
 * **Length.** The video is the audio length plus 1.5 s; the tail is silent and fades out.
-* **Captions.** They are drawn on the page canvas, so the render captures them. Each shows 1–3 short lines with the spoken word highlighted. Spellings are fixed from the script ("super-Earth", "55 Cancri e", "LHS 1140 b", "K2-18 b", "Luna", "ten"). In vertical, captions stay clear of TikTok's top bar, right-hand buttons and bottom sheet.
+* **Captions.** They are drawn on the page canvas, so the render captures them. Each shows 1–3 short lines with the spoken word highlighted. Spellings are fixed from the script ("rogue planets", "Luna", "Antarctica"). In vertical, captions stay clear of TikTok's top bar, right-hand buttons and bottom sheet.
 * **Two formats.** Both use the same scenes. `src/stage.ts` fits each shot into 9:16 and 16:9 and sets the layout slots (captions, facts, Luna) per format.
 * **Rendering.** `scripts/render.mjs` uses Puppeteer and reads each frame with `gl.readPixels`. Raw RGBA goes into ffmpeg with `libx264 -crf 18 -preset veryfast -pix_fmt yuv420p`, then the narration is added with `-c:v copy`. Output goes to a `.tmp.mp4` and is renamed only when ffmpeg succeeds.
 
@@ -51,7 +51,7 @@ Preview controls: play/pause, a seek bar (it also reaches the silent 1.5 s tail)
 
 ## Swapping the character sheet
 
-The sprites live in `public/character/`. They are cut out by `tools/extract_sprites.py` from these sheets:
+The sprites in `public/character/` are copied from the super-Earth project, so they're the same cleaned set. They are cut out by `tools/extract_sprites.py` from these sheets:
 
 * `sheet_new.png`: the 4×4 emotion poses (the main source).
 * `sheet_gestures.jpg`: waving, thinking and laptop.
@@ -100,8 +100,10 @@ The cat on her head lags behind her body by 0.1 s; the sprite shader rotates the
 | File | What it is |
 |---|---|
 | `src/timeline.ts` | anchors, fuzzy matching, captions, spelling fixes |
-| `src/scenes-a.ts`, `src/scenes-b.ts` | the 23 scenes (title + 22) |
-| `src/world.ts`, `src/planets.ts`, `src/ship.ts` | props, procedural planets, the rocket |
+| `src/scenes-rogue.ts` | the 23 scenes of this episode (title + 22) |
+| `src/rogue-props.ts`, `src/rogue-hud.ts` | rogue planet, flashlight, ice, cracks, phone chat, light curve, thermometer, sunscreen, telescope, dawn |
+| `src/world.ts`, `src/planets.ts`, `src/ship.ts` | shared series props, procedural planets, the rocket |
+| `src/scenes-a.ts` | shared helpers (`buddy`, `ship`, `stat`, `label`); its own scene list belongs to super-Earth and is unused here |
 | `src/luna.ts`, `src/motion.ts` | Luna's sprite, bubbles, silhouette, hop motion |
 | `src/engine/*` | toon materials and outlines, post-processing (bloom, vignette, grain), canvas text layer |
 | `scripts/render.mjs`, `scripts/still.mjs` | offline rendering |

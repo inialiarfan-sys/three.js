@@ -154,7 +154,7 @@ function placeTorch( t: number ) {
 	rogue.torchGlow.scale.setScalar( ( L ? L.height : 0.5 ) * 0.5 * on );
 	rogue.spot.position.copy( _a ); rogue.spot.target.position.copy( _b ); rogue.spot.target.updateMatrixWorld();
 	rogue.spot.angle = spread; rogue.spot.distance = len * 2.5;
-	rogue.spot.intensity = ( T.intensity ?? 30 ) * on;
+	rogue.spot.intensity = ( T.intensity ?? 30 ) * on * 0.35;   // soft: lights the ice without a glare streak
 }
 
 async function grab(): Promise<string> {

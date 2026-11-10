@@ -125,8 +125,8 @@ export function buildRogue( w: World ) {
 
 	{
 		const { shell, water } = w.iceCut.userData as { shell: THREE.Mesh; water: THREE.Mesh };
-		( shell.material as THREE.MeshToonMaterial ).color.set( '#8c93c4' );
-		const wm = water.material as THREE.MeshToonMaterial; wm.color.set( '#1d3b86' ); wm.emissive.set( '#1f4fb8' ).multiplyScalar( 0.7 );
+		( shell.material as THREE.MeshToonMaterial ).color.set( '#d6dcff' );
+		const wm = water.material as THREE.MeshToonMaterial; wm.color.set( '#2f6fe0' ); wm.emissive.set( '#3f8cff' ).multiplyScalar( 0.9 );
 		const core = w.iceCut.children[ 2 ] as THREE.Mesh;
 		const cm = core.material as THREE.MeshToonMaterial; cm.color.set( '#ffb27a' ); cm.emissive = new THREE.Color( '#ff7a3c' ).multiplyScalar( 1.3 );
 		const glow = w.iceCut.children[ 3 ] as THREE.Mesh;

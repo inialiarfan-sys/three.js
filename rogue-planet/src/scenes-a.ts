@@ -37,7 +37,10 @@ export function buddy( c: Stage, side: 'L' | 'R', poses: [ number, Sprite ][], b
 	const from = side === 'L' ? - 1.35 : 1.35;
 	const x = c.t < enter + 0.72 ? lerp( from, sl.x, inProg ) : sl.x;
 	const motion = ( t: number ) => ( t < enter + 0.72 ? hopIn( t ) : o.space ? float( t, 0.5 ) : idle( t ) );
-	c.lunaAt( x, sl.y, { sprite: p.v, poseAt: p.at, face: o.face ?? ( side === 'L' ? 1 : - 1 ), shadow: o.space ? 0.35 : 1, bubble: c.bubbles( bubbles ) }, motion );
+	const bub = c.bubbles( bubbles );
+	let bx = x;
+	if ( c.V && side === 'L' ) { bx = x + 0.12; if ( bub ) ( bub as { side?: 1 | -1 } ).side = - 1; }   // vertical: bubble on her outer side, away from the key visual
+	c.lunaAt( bx, sl.y, { sprite: p.v, poseAt: p.at, face: o.face ?? ( side === 'L' ? 1 : - 1 ), shadow: o.space ? 0.35 : 1, bubble: bub }, motion );
 }
 
 /** Ship helper: position/rotation + flame/door/face */

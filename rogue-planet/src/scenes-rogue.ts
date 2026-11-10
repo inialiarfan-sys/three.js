@@ -63,10 +63,10 @@ export const SCENES: SceneDef[] = [
 			const t0 = c.t0, tR = at( 'noSunrise' ), tS = at( 'noSunset' ), tD = at( 'noDay' ), tE = at( 'ever' );
 			night( c, 0.4 );
 			c.frame( V3(), 2.2 );
-			rogue( c, V3( 0, c.V ? - 0.35 : - 0.15, 0 ), 0.7 * spring( c.t - t0, 1.6, 5 ), { tumble: 0.4 } );
+			rogue( c, V3( 0, c.V ? - 0.75 : - 0.35, 0 ), 0.6 * spring( c.t - t0, 1.6, 5 ), { tumble: 0.4 } );
 			// quick cuts: each icon pops in and gets crossed out on its word
 			const cuts: [ number, number, 'sunrise' | 'sunset' | 'sun' ][] = [ [ tR, tS, 'sunrise' ], [ tS, tD, 'sunset' ], [ tD, tE, 'sun' ] ];
-			const r = c.V ? c.W * 0.13 : c.H * 0.13, ix = c.sx, iy = c.V ? c.H * 0.27 : c.H * 0.3;
+			const r = c.V ? c.W * 0.12 : c.H * 0.12, ix = c.sx, iy = c.V ? c.H * 0.2 : c.H * 0.24;
 			for ( const [ a, b, k ] of cuts ) {
 				const s = popInOut( c.t, a, b - 0.02, 0.1 );
 				sunIcon( c.hud, k, ix, iy, r, s, c.t );
@@ -123,7 +123,7 @@ export const SCENES: SceneDef[] = [
 			const mo = ( t: number ) => hops( t, t0 + 0.1, tClick - 0.15, { hopDur: 0.34, height: 0.2, wobble: 9 } );
 			const x = lerp( c.V ? - 1.6 : - 2.4, c.V ? - 0.35 : - 0.6, mo( c.t ).p );
 			c.lunaWorld( V3( x, - 1.48, - 0.6 ), { sprite: c.t > tClick ? 'excited_pose' : 'astronaut', poseAt: tClick, face: 1, bubble: c.bubbles( [ [ tClick + 0.1, c.t1 + 0.3, 'excited' ] ] ) }, mo );
-			if ( c.t > tClick - 0.15 ) c.torch = { on: lit, aim: V3( 2.5, - 0.2, - 2.2 ), spread: 0.55, intensity: 45 };
+			if ( c.t > tClick - 0.15 ) c.torch = { on: lit, aim: V3( 2.8, 0.1, - 2.6 ), spread: 0.5, intensity: 14 };
 			c.hud.text( 'CLICK!', c.sx + ( c.V ? 180 : 260 ), c.L.statY + c.H * 0.1, c.L.statSize * 0.5, { scale: popInOut( c.t, tClick, tClick + 0.6 ), fill: PALETTE.yellow, rot: 0.12 } );
 		},
 	},
@@ -147,12 +147,12 @@ export const SCENES: SceneDef[] = [
 				c.w.key.position.set( 0, 0.2, 3 );
 			} else {
 				c.frame( V3(), 2.0, undefined, tS );
-				rogue( c, V3( 0, c.V ? - 0.1 : - 0.1, 0 ), 0.75 * spring( c.t - tS, 1.8, 5 ), { tumble: 0.5 } );
+				rogue( c, V3( 0, c.V ? - 0.45 : - 0.3, 0 ), 0.6 * spring( c.t - tS, 1.8, 5 ), { tumble: 0.5 } );
 				c.hud.text( 'no star!', c.sx, c.L.statY, c.L.statSize * 0.5, { scale: popInOut( c.t, tS + 0.3, tR - 0.1 ), fill: '#c9d6ff' } );
 				const ws = wordAfter( 'rogue', 'rogue' );
 				c.hud.text( 'ROGUE', c.sx, c.L.statY, c.L.statSize * 1.05, { scale: spring( c.t - ws ), fill: PALETTE.periwinkle, rot: - 0.05 } );
 				c.hud.text( 'PLANETS', c.sx, c.L.statY + c.L.statSize * 1.0, c.L.statSize * 0.85, { scale: spring( c.t - ws - 0.18 ), fill: '#ffffff', rot: 0.04 } );
-				burst( c, 0, V3( 0, c.V ? - 0.1 : - 0.1, - 1.4 ), 3.2, ws, ws + 0.8 );
+				burst( c, 0, V3( 0, c.V ? - 0.45 : - 0.3, - 1.4 ), 2.6, ws, ws + 0.8 );
 			}
 			buddy( c, 'R', [ [ t0, 'astronaut' ], [ tS, 'confused_pose' ], [ tR, 'excited_pose' ] ], [ [ tS + 0.3, tR - 0.1, 'confused' ], [ tR + 0.3, c.t1 + 0.3, 'excited' ] ], { enter: t0 + 0.3, space: true } );
 		},
@@ -163,9 +163,9 @@ export const SCENES: SceneDef[] = [
 			const t0 = c.t0, tB = at( 'ball' );
 			night( c, 0.6 );
 			const u = ( c.t - t0 ) / ( c.t1 - t0 );
-			const path = ( k: number ) => V3( lerp( - 3.2, 3.2, k ) * ( c.V ? 0.55 : 1 ), Math.sin( k * 7 ) * 0.45 + Math.sin( k * 3 + 1 ) * 0.3 + ( c.V ? 0.4 : 0 ), 0 );
+			const path = ( k: number ) => V3( lerp( - 3.2, 3.2, k ) * ( c.V ? 0.55 : 1 ), Math.sin( k * 7 ) * 0.45 + Math.sin( k * 3 + 1 ) * 0.3 + ( c.V ? 1.0 : 0.2 ), 0 );
 			const k = lerp( 0.15, 0.85, u );
-			c.frame( V3( path( k ).x * 0.4, c.V ? 0.4 : 0, 0 ), 2.6 );
+			c.frame( V3( path( k ).x * 0.4, c.V ? 0.4 : 0, 0 ), 2.6, { x: 0, y: 0 } );
 			const bounce = c.t > tB ? Math.abs( Math.sin( ( c.t - tB ) * 9 ) ) * Math.exp( - ( c.t - tB ) * 2.5 ) * 0.35 : 0;
 			const p = path( k ).add( V3( 0, bounce, 0 ) );
 			rogue( c, p, 0.42, { roll: - k * 18, spin: 0 } );
@@ -178,7 +178,7 @@ export const SCENES: SceneDef[] = [
 				m4.compose( v3, q, s3 ); dots.setMatrixAt( i, m4 );
 			}
 			dots.instanceMatrix.needsUpdate = true;
-			label( c, p.clone().add( V3( 0, - 0.75, 0 ) ), 'lost ball?', tB + 0.1, c.t1, 0.32, '#c9d6ff' );
+			label( c, p.clone().add( V3( 0, 0.7, 0 ) ), 'lost ball?', tB + 0.1, c.t1, 0.32, '#c9d6ff' );
 			buddy( c, 'L', [ [ t0, 'astronaut' ], [ tB, 'thinking' ] ], [ [ tB + 0.2, c.t1 + 0.3, 'sad' ] ], { space: true } );
 		},
 	},
@@ -189,7 +189,7 @@ export const SCENES: SceneDef[] = [
 			night( c, 0.6 );
 			const rr = c.r, w = c.w;
 			const C = V3( 0, c.V ? 0.25 : 0, 0 );
-			c.frame( C, 2.4 );
+			c.frame( C, 2.4, { x: c.L.focus.x, y: c.V ? 0.42 : c.L.focus.y } );
 			star( c, w.star, C.clone().add( V3( 0, 0, - 0.6 ) ), 0.4 * spring( c.t - t0 - 0.1 ) );
 			w.key.position.copy( C ).add( V3( 0, 0, 2 ) );
 			rr.orbits.visible = c.t < tP + 1;
@@ -276,7 +276,7 @@ export const SCENES: SceneDef[] = [
 			const t0 = c.t0, tBend = at( 'bends' ), tBr = at( 'brighter' ), tF = at( 'flash' ), tS = at( 'something' );
 			night( c, 0.5 );
 			const C = V3( 0, c.V ? 0.45 : 0.15, 0 );
-			c.frame( C, 2.0 );
+			c.frame( C, 2.0, { x: c.L.focus.x, y: c.V ? 0.42 : c.L.focus.y } );
 			// the planet drifts across; it lines up with the star exactly on "brighter"
 			const x = lerp( - 2.2, 2.2, ( c.t - ( tBr - ( tBr - t0 ) ) ) / ( ( tBr - t0 ) * 2 ) );
 			const P = C.clone().add( V3( x, 0.05, 1.2 ) );
@@ -293,7 +293,7 @@ export const SCENES: SceneDef[] = [
 				const g = c.hud.g; g.save(); g.lineCap = 'round';
 				for ( const side of [ - 1, 1 ] ) for ( let k = 0; k < 2; k ++ ) {
 					const off = pr * ( 1.25 + k * 0.35 ) * side;
-					const endY = pP.y + ( c.V ? c.H * 0.3 : c.H * 0.36 );
+					const endY = pP.y + ( c.V ? c.H * 0.2 : c.H * 0.3 );
 					for ( const [ col, lw, a ] of [ [ '#ffe07a', 16, 0.25 ], [ '#ffe07a', 6, 0.85 ], [ '#ffffff', 2.5, 1 ] ] as const ) {
 						g.globalAlpha = a * bs * ( 0.6 + 0.4 * align ); g.strokeStyle = col; g.lineWidth = lw;
 						g.beginPath(); g.moveTo( sP.x + side * pr * 0.1, sP.y );
@@ -307,7 +307,7 @@ export const SCENES: SceneDef[] = [
 			c.w.bursts[ 0 ].visible = false;
 			const glow = popInOut( c.t, tF, tF + 0.9 );
 			if ( glow > 0 ) burst( c, 0, sp.clone().add( V3( 0, 0, 0.1 ) ), 0.9, tF, tF + 0.8 );
-			const gx = c.V ? c.W * 0.5 : c.W * 0.8, gy = c.V ? c.H * 0.155 : c.H * 0.23, gw = c.V ? c.W * 0.42 : c.W * 0.22;
+			const gx = c.V ? c.W * 0.64 : c.W * 0.8, gy = c.V ? c.H * 0.5 : c.H * 0.23, gw = c.V ? c.W * 0.4 : c.W * 0.22;
 			lightCurve( c.hud, gx, gy, gw, popInOut( c.t, tBend + 0.3, c.t1 - 0.1 ), remap( c.t, tBend + 0.3, tS ), clamp( ( tBr + 0.4 - tBend - 0.3 ) / ( tS - tBend - 0.3 ) ) );
 			c.hud.text( 'like a magnifying glass', c.sx, c.V ? c.H * 0.27 : c.L.statY, c.L.statSize * 0.38, { scale: popInOut( c.t, wordAfter( 'bends', 'magnifying' ), tBr - 0.1 ), fill: '#ffffff' } );
 			c.hud.text( 'something is there!', c.sx, c.V ? c.H * 0.27 : c.L.statY, c.L.statSize * 0.46, { scale: popInOut( c.t, tS, c.t1 ), fill: PALETTE.yellow } );
@@ -374,7 +374,7 @@ export const SCENES: SceneDef[] = [
 			const up = c.px( pos.clone().add( V3( H * 0.32, H * 1.05, 0.05 ) ) );
 			const back = c.px( pos.clone().add( V3( - H * 0.15, H * 0.35, 0.05 ) ) );
 			const k = easeInOutCubic( remap( c.t, tN + 0.25, tN + 0.5 ) );
-			const bh = c.V ? c.H * 0.08 : c.H * 0.13;
+			const bh = c.V ? c.H * 0.12 : c.H * 0.17;
 			if ( ! hide ) sunscreen( c.hud, lerp( up.x, back.x, k ), lerp( up.y, back.y, k ) + Math.sin( c.t * 5 ) * 4, bh, spring( c.t - t0 - 0.3 ) * ( 1 - k * 0.6 ), 0.15 + Math.sin( c.t * 4 ) * 0.05 );
 			bigX( c.hud, up.x, up.y, bh * 0.75, popInOut( c.t, tN, tN + 0.9 ) );
 			c.hud.stat( c.t, t0 + 0.4, tN - 0.05, 'SPF 50!', c.sx, c.L.statY, c.L.statSize * 0.7, PALETTE.yellow );
@@ -441,7 +441,7 @@ export const SCENES: SceneDef[] = [
 			iceGround( c, 14, [ - 0.5, 2.0 ], 6, 0.5 );
 			const tLeap = t0 + T * 0.5, leapDur = T * 0.2, tIn = tLeap + leapDur, tBlast = tIn + T * 0.08;
 			const x0 = c.V ? - 1.3 : - 2.4, x1 = c.V ? 0.55 : 1.2;
-			const shipP = V3( x1 + ( c.V ? 0.6 : 1.0 ), 1.28, 0.1 );
+			const shipP = V3( x1 + ( c.V ? 0.6 : 1.0 ), 0.93, 0.1 );
 			const run = ( t: number ) => hops( t, t0 + 0.02, tLeap, { hopDur: 0.24, height: 0.3, wobble: 15, squash: 1.2, lean: 0.3 } );
 			const m = run( c.t );
 			const camX = lerp( x0 + 0.6, x1, smooth( remap( c.t, t0, tIn ) ) );
@@ -460,7 +460,7 @@ export const SCENES: SceneDef[] = [
 			}
 			sl.instanceMatrix.needsUpdate = true; c.r.slabOl.instanceMatrix.needsUpdate = true;
 			const blast = c.t > tBlast ? Math.pow( c.t - tBlast, 2 ) * 16 : 0;
-			ship( c, shipP.clone().add( V3( blast * 0.3, blast, 0 ) ), { flame: c.t > tBlast - 0.15 ? 1.2 : 0.3, door: 1 - smooth( remap( c.t, tIn, tIn + 0.06 ) ), face: c.t > tIn ? 'crying' : null, wobble: c.t > tIn ? 1.5 : 0 } );
+			ship( c, shipP.clone().add( V3( blast * 0.3, blast, 0 ) ), { scale: 0.72, flame: c.t > tBlast - 0.15 ? 1.2 : 0.3, door: 1 - smooth( remap( c.t, tIn, tIn + 0.06 ) ), face: c.t > tIn ? 'crying' : null, wobble: c.t > tIn ? 1.5 : 0 } );
 			if ( c.t > tBlast - 0.1 ) puffs( c, c.w.clouds, shipP.clone().add( V3( 0, - 1.1, 0.3 ) ), 1.2, 0.2, 0.3 * clamp( 1.5 - ( c.t - tBlast ) * 2 ), 1, 9 );
 			if ( c.t < tIn ) {
 				let pos: THREE.Vector3, mo: ( t: number ) => Motion;
@@ -499,8 +499,8 @@ export const SCENES: SceneDef[] = [
 			const g = easeOutCubic( remap( c.t, tT, tT + 1.4 ) );
 			const tel = c.r.telescope;
 			tel.visible = c.t > tT;
-			const tp = V3( lerp( c.V ? - 2.6 : - 3.8, c.V ? - 0.6 : - 1.4, g ), c.V ? 1.15 : 0.75, 0.4 );
-			tel.position.copy( tp ); tel.scale.setScalar( c.V ? 0.4 : 0.5 ); tel.rotation.set( 0.2, - 0.3, - 0.25 + Math.sin( c.t * 0.8 ) * 0.08 );
+			const tp = V3( lerp( c.V ? - 2.6 : - 3.8, c.V ? - 0.75 : - 1.5, g ), c.V ? 0.6 : 0.55, 0.4 );
+			tel.position.copy( tp ); tel.scale.setScalar( c.V ? 0.6 : 0.65 ); tel.rotation.set( 0.2, - 0.3, - 0.25 + Math.sin( c.t * 0.8 ) * 0.08 );
 			if ( c.t > tT + 0.8 ) {
 				const sb = c.r.scanBeam; sb.visible = true;
 				const sweep = Math.sin( ( c.t - tT ) * 1.2 ) * 0.5;
