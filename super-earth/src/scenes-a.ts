@@ -53,7 +53,6 @@ export const SCENES_A: SceneDef[] = [
 			crowd( c, V3( 0, 0, 4 ), 1.2, t0 + 0.2, 2.5 );
 			const s = popInOut( c.t, tQ + 0.15, c.t1 + 0.3 );
 			c.hud.text( '?', c.W / 2, c.H * ( c.V ? 0.36 : 0.42 ), c.L.statSize * 3.2, { scale: s, fill: PALETTE.yellow, rot: Math.sin( c.t * 3 ) * 0.08 } );
-			if ( c.t > tQ ) c.flash = Math.max( c.flash, 0.3 * Math.exp( - ( c.t - tQ - 0.15 ) * 12 ) * ( c.t > tQ + 0.15 ? 1 : 0 ) );
 		},
 	},
 	// 2 ── "Not Mercury. Not Jupiter. Not Earth. Something in between."

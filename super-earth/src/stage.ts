@@ -97,9 +97,8 @@ export class Stage {
 		return { x: ( tmp.x * 0.5 + 0.5 ) * this.W, y: ( - tmp.y * 0.5 + 0.5 ) * this.H };
 	}
 
-	cuts( ...times: number[] ) {
-		for ( const c of times ) if ( this.t >= c ) this.flash = Math.max( this.flash, 0.5 * Math.exp( - ( this.t - c ) * 16 ) );
-	}
+	/** Marks hard cuts. Cuts are clean: no white flash (it read as a strobe on playback). */
+	cuts( ..._times: number[] ) { /* intentionally no visual effect */ }
 
 	/** [[time, value], ...] -> current value + when it started */
 	sched<T>( list: [ number, T ][] ): { v: T; at: number } {

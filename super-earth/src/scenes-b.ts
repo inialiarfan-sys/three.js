@@ -253,7 +253,6 @@ export const SCENES_B: SceneDef[] = [
 			const shipP = V3( x1 + ( c.V ? 0.75 : 1.4 ), C.y + 0.6, 0.3 );
 			const camX = lerp( x0 + 1, x1, smooth( remap( c.t, t0, tLeap ) ) );
 			c.frame( V3( camX, C.y + 0.45, 0 ), 1.9, { x: 0, y: 0 }, t0, c.t < tIn + 0.8 ? 1.0 : 0.5 );
-			for ( const g of gos ) if ( c.t > g ) c.flash = Math.max( c.flash, 0.18 * Math.exp( - ( c.t - g ) * 14 ) );
 			sea( c, V3( camX, C.y, 0 ), 0, null );
 			c.dim = 0.1;
 			c.hud.speedLines( c.t, 0.6, 21, - 1, 'rgba(160,210,255,0.55)' );
