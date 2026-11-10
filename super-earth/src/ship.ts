@@ -35,13 +35,13 @@ export class Ship {
 		stripe.rotation.x = Math.PI / 2; stripe.position.y = - 0.45;
 		// window
 		const ring = new THREE.Mesh( new THREE.TorusGeometry( 0.3, 0.07, 12, 40 ), toon( '#9cc0ff' ) );
-		ring.position.set( 0, 0.42, 0.56 ); ring.rotation.x = - 0.12;
+		ring.position.set( 0, 0.42, 0.64 ); ring.rotation.x = - 0.12;
 		addOutline( ring, 0.02 );
 		this.windowMat = new THREE.MeshBasicMaterial( { color: '#ffffff' } );
 		const win = new THREE.Mesh( new THREE.CircleGeometry( 0.3, 40 ), this.windowMat );
-		win.position.set( 0, 0.42, 0.565 ); win.rotation.x = - 0.12;
+		win.position.set( 0, 0.42, 0.648 ); win.rotation.x = - 0.12;
 		const gloss = new THREE.Mesh( new THREE.CircleGeometry( 0.07, 16 ), new THREE.MeshBasicMaterial( { color: '#ffffff', transparent: true, opacity: 0.85 } ) );
-		gloss.position.set( - 0.12, 0.56, 0.58 ); gloss.scale.set( 1, 0.6, 1 ); gloss.rotation.z = 0.6;
+		gloss.position.set( - 0.12, 0.56, 0.665 ); gloss.scale.set( 1, 0.6, 1 ); gloss.rotation.z = 0.6;
 		// fins (rounded)
 		const finShape = new THREE.Shape();
 		finShape.moveTo( 0, 0 ); finShape.quadraticCurveTo( 0.55, - 0.1, 0.62, - 0.62 ); finShape.quadraticCurveTo( 0.3, - 0.5, 0, - 0.55 ); finShape.lineTo( 0, 0 );
@@ -64,9 +64,9 @@ export class Ship {
 		const doorEdge = new THREE.Mesh( new THREE.ExtrudeGeometry( doorShape, { depth: 0.03, bevelEnabled: false } ), new THREE.MeshBasicMaterial( { color: PALETTE.ink } ) );
 		doorEdge.scale.set( 1.12, 1.08, 1 ); doorEdge.position.set( - 0.02, - 0.02, - 0.01 );
 		this.door.add( doorEdge, doorMesh );
-		this.door.position.set( - dw / 2, - 0.62, 0.6 );
+		this.door.position.set( - dw / 2, - 0.66, 0.62 );
 		const doorHole = new THREE.Mesh( new THREE.ShapeGeometry( doorShape ), new THREE.MeshBasicMaterial( { color: '#1b2150' } ) );
-		doorHole.position.set( - dw / 2, - 0.62, 0.595 );
+		doorHole.position.set( - dw / 2, - 0.66, 0.615 );
 		// engine bell + flame
 		const bell = new THREE.Mesh( new THREE.CylinderGeometry( 0.22, 0.34, 0.25, 32, 1, true ), toon( '#c9d6ff', { side: THREE.DoubleSide } ) );
 		bell.position.y = - 1.2;

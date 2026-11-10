@@ -87,7 +87,15 @@ function render( t: number ) {
 
 	hud.captions( t, captions, stage.L.capX, stage.L.capY, stage.L.capW, stage.L.capSize );
 	hud.end();
-	if ( stage.luna ) luna.update( t, stage.luna, stage.camera );
+	if ( stage.luna ) {
+		// keep reaction bubbles inside the frame: Luna near the left edge -> bubble on her right, and vice versa
+		const b = stage.luna.bubble;
+		if ( b && b.side === undefined ) {
+			const x = stage.px( stage.luna.pos ).x / stage.W;
+			if ( x < 0.3 ) b.side = 1; else if ( x > 0.7 ) b.side = - 1;
+		}
+		luna.update( t, stage.luna, stage.camera );
+	}
 	else luna.group.visible = false;
 
 	const fin = post.final.uniforms;

@@ -322,23 +322,35 @@ export function buildWorld() {
 	const smokes = [ 0, 1, 2, 3, 4, 5 ].map( ( i ) => add( puff( '#cfcbe0', 300 + i, 4, 0.08 ) ) );
 	const clouds = [ 0, 1, 2, 3 ].map( ( i ) => add( puff( '#ffffff', 200 + i ) ) );
 
-	// jacket layers that wrap Luna (in the overlay, drawn over her sprite)
+	// jackets that wrap Luna (overlay, drawn over her sprite). Each jacket = a puffy ball
+	// (only the outermost shows) + a coloured collar that stays visible under her face.
 	const jackets = add( new THREE.Group(), overlay );
 	{
 		const cols = [ '#ff8fab', '#8fd6ff', '#ffe07a', '#a8f0c8', '#c7a6ff', '#ffb27a', '#8fa8ff', '#ffb8d2', '#9be3c8', '#ffd1a8' ];
+		const basic = ( color: string, extra: THREE.MeshBasicMaterialParameters = {} ) => new THREE.MeshBasicMaterial( { color, depthTest: false, depthWrite: false, transparent: true, ...extra } ); // transparent: so renderOrder puts them over her sprite
 		for ( let i = 0; i < 10; i ++ ) {
 			const g = new THREE.Group();
-			const ball = new THREE.Mesh( new THREE.SphereGeometry( 1, 32, 16 ), new THREE.MeshBasicMaterial( { color: cols[ i ], depthTest: false, depthWrite: false } ) );
-			const shade = new THREE.Mesh( new THREE.CircleGeometry( 1, 32 ), new THREE.MeshBasicMaterial( { color: '#000000', transparent: true, opacity: 0.12, depthTest: false, depthWrite: false } ) );
-			const hl = new THREE.Mesh( new THREE.CircleGeometry( 0.25, 16 ), new THREE.MeshBasicMaterial( { color: '#ffffff', transparent: true, opacity: 0.7, depthTest: false, depthWrite: false } ) );
-			const ol = new THREE.Mesh( new THREE.CircleGeometry( 1.06, 32 ), new THREE.MeshBasicMaterial( { color: PALETTE.ink, depthTest: false, depthWrite: false } ) );
-			shade.position.set( 0.15, - 0.25, 0.9 ); shade.scale.set( 0.9, 0.7, 1 );
-			hl.position.set( - 0.4, 0.45, 1.01 );
+			const ballG = new THREE.Group(); ballG.name = 'ball';
+			const ol = new THREE.Mesh( new THREE.CircleGeometry( 1.05, 40 ), basic( PALETTE.ink ) );
+			const ball = new THREE.Mesh( new THREE.CircleGeometry( 1, 40 ), basic( cols[ i ] ) );
+			const shade = new THREE.Mesh( new THREE.CircleGeometry( 1, 40, Math.PI * 1.05, Math.PI * 0.9 ), basic( '#000000', { transparent: true, opacity: 0.12 } ) );
+			shade.scale.set( 0.92, 0.92, 1 );
+			ballG.add( ol, ball, shade );
 			// quilted stitch lines
-			const stitch = new THREE.Mesh( new THREE.TorusGeometry( 0.98, 0.025, 6, 40, Math.PI ), new THREE.MeshBasicMaterial( { color: PALETTE.ink, transparent: true, opacity: 0.5, depthTest: false, depthWrite: false } ) );
-			stitch.rotation.z = Math.PI; stitch.scale.set( 1, 0.25, 1 ); stitch.position.z = 1.0;
-			ol.renderOrder = 22 + i * 3; ball.renderOrder = 23 + i * 3; shade.renderOrder = 24 + i * 3; hl.renderOrder = 24 + i * 3; stitch.renderOrder = 24 + i * 3;
-			g.add( ol, ball, shade, hl, stitch );
+			for ( let k = 0; k < 3; k ++ ) {
+				const y = - 0.55 + k * 0.4;
+				const half = Math.sqrt( 1 - y * y ) * 0.92;
+				const st = new THREE.Mesh( new THREE.PlaneGeometry( half * 2, 0.035 ), basic( PALETTE.ink, { transparent: true, opacity: 0.45 } ) );
+				st.position.y = y; ballG.add( st );
+			}
+			ol.renderOrder = 30; ball.renderOrder = 31; shade.renderOrder = 32; ballG.children.slice( 3 ).forEach( ( m ) => ( m.renderOrder = 32 ) );
+			// collar: a fat upper arc
+			const collarG = new THREE.Group(); collarG.name = 'collar';
+			const cOl = new THREE.Mesh( new THREE.RingGeometry( 0.78, 1.08, 40, 1, 0, Math.PI ), basic( PALETTE.ink ) );
+			const cIn = new THREE.Mesh( new THREE.RingGeometry( 0.83, 1.03, 40, 1, 0.03, Math.PI - 0.06 ), basic( cols[ i ] ) );
+			cOl.renderOrder = 40 + i * 2; cIn.renderOrder = 41 + i * 2;
+			collarG.add( cOl, cIn );
+			g.add( ballG, collarG );
 			jackets.add( g );
 		}
 	}
@@ -364,9 +376,19 @@ export function buildWorld() {
 	} ) ) );
 	beam.geometry.translate( 0, - 2, 0 );
 
+	const seaGlow = add( new THREE.Mesh( new THREE.PlaneGeometry( 1, 1 ), new THREE.MeshBasicMaterial( { map: radialTexture( 'rgba(70,140,230,0.55)', 'rgba(40,90,180,0)' ), transparent: true, depthWrite: false } ) ) );
 	// the creature: only ever a shadow and two eyes
-	const shadowTex = radialTexture( 'rgba(2,4,14,0.92)', 'rgba(2,4,14,0)', 256 );
-	const creatureShadow = add( new THREE.Mesh( new THREE.PlaneGeometry( 2.2, 1 ), new THREE.MeshBasicMaterial( { map: shadowTex, transparent: true, depthWrite: false } ) ) );
+	// a blurred, whale-like silhouette (never a clear creature)
+	const shadowTex = ( () => {
+		const [ c, g ] = canvas( 1024, 400 );
+		g.filter = 'blur(18px)';
+		g.fillStyle = 'rgba(1,3,10,0.95)';
+		g.beginPath(); g.ellipse( 470, 210, 360, 120, 0, 0, 7 ); g.fill();                       // body
+		g.beginPath(); g.moveTo( 790, 210 ); g.quadraticCurveTo( 900, 120, 990, 60 ); g.quadraticCurveTo( 930, 210, 990, 350 ); g.quadraticCurveTo( 900, 290, 790, 210 ); g.fill(); // tail
+		g.beginPath(); g.ellipse( 430, 320, 120, 40, 0.5, 0, 7 ); g.fill();                         // fin
+		return tex( c );
+	} )();
+	const creatureShadow = add( new THREE.Mesh( new THREE.PlaneGeometry( 2.6, 1 ), new THREE.MeshBasicMaterial( { map: shadowTex, transparent: true, depthWrite: false } ) ) );
 	const eyeTex = ( () => {
 		const [ c, g ] = canvas( 256, 128 );
 		const grd = g.createRadialGradient( 128, 64, 4, 128, 64, 62 );
@@ -388,9 +410,10 @@ export function buildWorld() {
 		const wall = new THREE.Mesh( new THREE.CylinderGeometry( 4, 4, 6, 48, 1, true, Math.PI * 0.6, Math.PI * 0.8 ), toon( '#dfe6ff', { side: THREE.BackSide } ) );
 		wall.rotation.y = Math.PI;
 		const floor = new THREE.Mesh( new THREE.CylinderGeometry( 4, 4, 0.2, 48 ), toon( '#b6c6ff' ) ); floor.position.y = - 1.6;
-		const portRing = new THREE.Mesh( new THREE.TorusGeometry( 0.9, 0.14, 12, 48 ), toon( '#9cc0ff' ) ); portRing.position.set( 0, 0.9, - 3.4 ); addOutline( portRing, 0.02 );
+		const portRing = new THREE.Mesh( new THREE.TorusGeometry( 0.9, 0.1, 12, 48 ), toon( '#9cc0ff' ) ); portRing.position.set( 0, 0.9, - 3.4 ); addOutline( portRing, 0.02 );
 		const portHole = new THREE.Mesh( new THREE.CircleGeometry( 0.9, 48 ), new THREE.MeshBasicMaterial( { color: '#141a44' } ) ); portHole.position.set( 0, 0.9, - 3.42 );
-		const portStars = starfield( 40, 7, 1 ); portStars.scale.setScalar( 0.75 ); portStars.position.set( 0, 0.9, - 3.4 ); portStars.scale.z = 0.01;
+		const portStars = new THREE.Group();
+		{ const r = rng( 17 ); for ( let i = 0; i < 14; i ++ ) { const a = r() * 6.28, d = Math.sqrt( r() ) * 0.75; const s = new THREE.Mesh( new THREE.CircleGeometry( 0.018 + r() * 0.03, 8 ), new THREE.MeshBasicMaterial( { color: new THREE.Color( pastelStar[ i % 6 ] ).multiplyScalar( 1.5 ) } ) ); s.position.set( Math.cos( a ) * d, 0.9 + Math.sin( a ) * d, - 3.41 ); portStars.add( s ); } }
 		const seat = new THREE.Mesh( new THREE.CapsuleGeometry( 0.7, 0.6, 8, 16 ), toon( '#ffb8d2' ) ); seat.rotation.z = Math.PI / 2; seat.position.set( 0, - 1.1, - 1.5 ); addOutline( seat, 0.03 );
 		const panel = new THREE.Mesh( new THREE.BoxGeometry( 2.2, 0.5, 0.4 ), toon( '#c7a6ff' ) ); panel.position.set( 2.2, - 0.9, - 2.4 ); panel.rotation.y = - 0.6; addOutline( panel, 0.03 );
 		const lights = [ '#ff8fab', '#a8f0c8', '#ffe07a' ].map( ( c, i ) => { const b = new THREE.Mesh( new THREE.SphereGeometry( 0.08, 12, 8 ), new THREE.MeshBasicMaterial( { color: new THREE.Color( c ).multiplyScalar( 1.6 ) } ) ); b.position.set( 1.9 + i * 0.3, - 0.6, - 2.1 + i * 0.2 ); return b; } );
@@ -426,7 +449,7 @@ export function buildWorld() {
 	return {
 		scene, overlay, all, hemi, key, neb, stars, milky, P, mystery, iceCut, star, sun, crowd, crowdOutline, crowdData, hostStars, solar, solarBalls,
 		cape, capeBase, pad, menu, fries, scale, needle, stairs, smokes, clouds, jackets, sea, seaSeed, rays, helmetGlow, beam,
-		creatureShadow, eyes, interior, hill, bursts, ship,
+		creatureShadow, eyes, seaGlow, interior, hill, bursts, ship,
 		hideAll() { for ( const o of all ) o.visible = false; },
 	};
 }

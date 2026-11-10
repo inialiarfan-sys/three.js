@@ -4,7 +4,7 @@ import { at, atEnd, wordAfter } from './timeline';
 import { clamp, easeInCubic, easeInOutCubic, easeOutCubic, lerp, popInOut, remap, smooth, spring } from './engine/math';
 import { PALETTE } from './engine/toon';
 import { bigX, pill, routeMap, stamp, sweat } from './engine/hud';
-import { burst, cape, crowd, planet, poofs, puffs, star, V3 } from './props';
+import { burst, cape, crowd, planet, puffs, solarSystem, V3 } from './props';
 import { hops, idle, leap, type Motion } from './motion';
 import type { Stage } from './stage';
 
@@ -139,14 +139,14 @@ export const SCENES_A: SceneDef[] = [
 			c.frame( V3( 0, 0, 0 ), c.V ? 2.6 : 2.0 );
 			if ( sw < 1 ) {
 				const k = 1 - sw;
-				const xs = c.V ? [ - 1.15, 0.15, 1.6 ] : [ - 2.0, - 0.4, 1.6 ];
+				const xs = c.V ? [ - 1.2, - 0.15, 1.15 ] : [ - 2.4, - 0.95, 0.85 ];
 				const y = c.V ? 0.3 : - 0.05;
-				planet( c, P.earth, V3( xs[ 0 ], y, 0 ), 0.42 * spring( c.t - t0 - 0.1 ) * k );
-				planet( c, P.rock, V3( xs[ 1 ], y, 0 ), 0.68 * spring( c.t - tB ) * k );
-				planet( c, P.neptune, V3( xs[ 2 ], y, 0 ), 1.0 * spring( c.t - tS ) * k );
-				label( c, V3( xs[ 0 ], y - 0.62, 0 ), 'Earth', t0 + 0.3, tR - 0.2, 0.3 );
-				label( c, V3( xs[ 1 ], y - 0.88, 0 ), 'super-Earth', tB, tR - 0.2, 0.3, PALETTE.mint );
-				label( c, V3( xs[ 2 ], y - 1.2, 0 ), 'Neptune', tS, tR - 0.2, 0.3, '#c9dcff' );
+				planet( c, P.earth, V3( xs[ 0 ], y, 0 ), ( c.V ? 0.3 : 0.42 ) * spring( c.t - t0 - 0.1 ) * k );
+				planet( c, P.rock, V3( xs[ 1 ], y, 0 ), ( c.V ? 0.45 : 0.68 ) * spring( c.t - tB ) * k );
+				planet( c, P.neptune, V3( xs[ 2 ], y, 0 ), ( c.V ? 0.68 : 1.0 ) * spring( c.t - tS ) * k );
+				label( c, V3( xs[ 0 ], y - ( c.V ? 0.5 : 0.62 ), 0 ), 'Earth', t0 + 0.3, tR - 0.2, 0.3 );
+				label( c, V3( xs[ 1 ], y - ( c.V ? 0.66 : 0.88 ), 0 ), 'super-Earth', tB, tR - 0.2, 0.3, PALETTE.mint );
+				label( c, V3( xs[ 2 ], y - ( c.V ? 0.9 : 1.2 ), 0 ), 'Neptune', tS, tR - 0.2, 0.3, '#c9dcff' );
 				c.hud.stat( c.t, tB, tR - 0.2, 'Bigger than Earth,', c.sx, c.L.statY, c.L.statSize * ( c.V ? 0.46 : 0.5 ), '#ffffff' );
 				c.hud.stat( c.t, tS, tR - 0.2, 'smaller than Neptune', c.sx, c.L.statY + c.L.statSize * 0.62, c.L.statSize * ( c.V ? 0.46 : 0.5 ), PALETTE.periwinkle );
 			}
@@ -161,8 +161,8 @@ export const SCENES_A: SceneDef[] = [
 			}
 			// Luna's face in the ship window, floating in her slot
 			const sl = c.slot( 'R' );
-			const sp = c.screen( sl.x, sl.y + ( c.V ? 0.16 : 0.32 ), c.camDist * 0.7 );
-			ship( c, sp.add( V3( 0, Math.sin( c.t * 1.4 ) * 0.05, 0 ) ), { scale: c.lunaHeight( c.camDist * 0.7 ) * 0.42, rot: - 0.25 + Math.sin( c.t ) * 0.05, flame: 0.35, face: 'thinking' } );
+			const sp = c.screen( c.V ? sl.x : 0.74, sl.y + ( c.V ? 0.16 : 0.45 ), c.camDist * 0.7 );
+			ship( c, sp.add( V3( 0, Math.sin( c.t * 1.4 ) * 0.05, 0 ) ), { scale: c.lunaHeight( c.camDist * 0.7 ) * ( c.V ? 0.42 : 0.34 ), rot: - 0.25 + Math.sin( c.t ) * 0.05, flame: 0.35, face: 'thinking' } );
 		},
 	},
 	// 6 ── "Here's the strange part … kept finding super-Earths. Again and again … none"
@@ -185,18 +185,11 @@ export const SCENES_A: SceneDef[] = [
 				c.hud.text( 'AND AGAIN!', c.W * 0.5, c.H * 0.36, c.L.statSize * 0.55, { scale: popInOut( c.t, g2, g2 + 0.9 ), fill: PALETTE.pink, rot: 0.1 } );
 			} else {
 				// our solar system: small ... (gap) ... giant
-				const sol = c.w.solar; sol.visible = true;
-				const width = sol.userData.width as number;
-				const sc = c.V ? 0.48 : 0.8;
-				sol.scale.setScalar( sc ); sol.position.set( - width * sc / 2, c.V ? 0.4 : 0.05, 0 );
-				sol.rotation.set( 0, 0, c.V ? 0 : 0 );
-				c.w.solarBalls.forEach( ( b, i ) => { b.scale.setScalar( spring( c.t - tN - i * 0.05 ) ); b.children[ 0 ].rotation.y = c.t * 0.4; } );
-				const gap = ( sol.userData.dashes as THREE.Group );
-				gap.scale.setScalar( spring( c.t - tN - 0.5 ) * ( 1 + Math.sin( c.t * 5 ) * 0.06 ) ); gap.rotation.z = c.t * 0.5;
-				c.frame( V3( 0, sol.position.y, 0 ), width * sc * ( c.V ? 0.62 : 0.5 ) );
-				const gp = c.px( V3( sol.position.x + ( sol.userData.gapX as number ) * sc, sol.position.y, 0 ) );
-				c.hud.text( '?', gp.x, gp.y, c.L.statSize * 0.6, { scale: spring( c.t - tN - 0.6 ), fill: PALETTE.yellow } );
-				pill( c.hud, 'none here!', gp.x, gp.y + c.L.statSize * 1.0, c.L.statSize * 0.32, spring( c.t - tN - 0.8 ), '#ffffff', '#ff6b81' );
+				const S = solarSystem( c, tN );
+				c.frame( S.center, S.radius, { x: 0, y: c.V ? 0 : c.L.focus.y * 0.3 } );
+				const gp = c.px( S.gap );
+				c.hud.text( '?', gp.x, gp.y, c.L.statSize * ( c.V ? 0.9 : 0.6 ), { scale: spring( c.t - tN - 0.6 ), fill: PALETTE.yellow } );
+				pill( c.hud, 'none here!', gp.x, gp.y + c.L.statSize * ( c.V ? 1.25 : 1.0 ), c.L.statSize * 0.32, spring( c.t - tN - 0.8 ), '#ffffff', '#ff6b81' );
 				c.hud.stat( c.t, tN + 0.1, c.t1 - 0.1, 'our solar system', c.sx, c.L.statY, c.L.statSize * 0.5, '#ffffff' );
 			}
 		},
@@ -207,8 +200,8 @@ export const SCENES_A: SceneDef[] = [
 			const t0 = c.t0, tG = at( 'giant' ), tNo = at( 'noMedium' ), tF = at( 'fries' ), tR = at( 'ranOut' );
 			const tMed = wordAfter( 'noMedium', 'medium' ), tMed2 = wordAfter( 'ranOut', 'medium' );
 			const w = c.w;
-			const bx = c.V ? 0 : - 0.2, by = c.V ? 0.45 : 0.05, bs = c.V ? 2.2 : 2.3;
-			c.punch( V3( c.V ? 0 : 0.6, c.V ? 0.35 : 0, 0 ), 1.9, tMed );
+			const bx = c.V ? 0.05 : - 0.2, by = c.V ? 0.62 : 0.05, bs = c.V ? 2.35 : 2.3;
+			c.punch( V3( c.V ? 0 : 0.6, c.V ? 0.35 : 0, 0 ), c.V ? 1.75 : 1.9, tMed );
 			w.menu.visible = true;
 			const ms = spring( c.t - t0, 1.8, 6 );
 			w.menu.position.set( bx, by, 0 ); w.menu.scale.setScalar( bs * ms ); w.menu.rotation.z = Math.sin( c.t * 1.2 ) * 0.015;
@@ -287,7 +280,7 @@ export const SCENES_A: SceneDef[] = [
 			const settle = c.t > tB ? Math.exp( - ( c.t - tB ) * 3 ) : 1;
 			w.needle.rotation.z = - spin * settle - ( c.t > tB ? 2.6 : 0 );
 			const sp = c.px( V3( 0, 0.45, 1.1 ) );
-			c.hud.text( '9999 kg?!', sp.x, sp.y - c.H * ( c.V ? 0.29 : 0.42 ), c.L.statSize * 0.5, { scale: popInOut( c.t, tS + 0.2, tN - 0.05 ), fill: '#ff8fab', rot: Math.sin( c.t * 20 ) * 0.05 } );
+			c.hud.text( '9999 kg?!', sp.x - c.W * ( c.V ? 0.2 : 0.12 ), sp.y - c.H * ( c.V ? 0.29 : 0.42 ), c.L.statSize * 0.5, { scale: popInOut( c.t, tS + 0.2, tN - 0.05 ), fill: '#ff8fab', rot: Math.sin( c.t * 20 ) * 0.05 } );
 			burst( c, 0, V3( 0, 0.9, 0.2 ), 1.8, tS + 0.1, tS + 0.7 );
 			const pose = c.sched<Parameters<Stage[ 'lunaAt' ]>[ 2 ][ 'sprite' ]>( [ [ t0, 'nervous' ], [ tN, 'crossed_arms' ], [ tB, 'pointing' ] ] );
 			c.lunaWorld( V3( 0, 0.39, 0.62 ), { sprite: pose.v, poseAt: pose.at, face: c.t > tB ? 1 : - 1, bubble: c.bubbles( [ [ tS + 0.1, tN - 0.1, 'surprised' ], [ tB + 0.1, c.t1 - 0.1, 'angry' ] ] ) },
@@ -302,7 +295,7 @@ export const SCENES_A: SceneDef[] = [
 			const t0 = c.t0, tL = at( 'legDay' );
 			const w = c.w;
 			w.stairs.visible = true; w.stairs.position.set( - 1.8, - 0.5, 0 ); w.stairs.scale.setScalar( 0.8 );
-			c.frame( V3( 0.2, 0.8, 0 ), 2.4 );
+			c.frame( V3( 0.9, c.V ? 0.8 : 1.5, 0 ), c.V ? 2.5 : 3.3, { x: 0, y: c.V ? 0.02 : - 0.18 } );
 			// three hard-won steps: each hop barely clears the next block
 			const steps = 3, hd = ( c.t1 - t0 - 0.1 ) / steps;
 			const mo = ( t: number ) => hops( t, t0 + 0.05, t0 + 0.05 + hd * steps, { hopDur: hd, height: 0.5, wobble: 14, squash: 1.8, lean: 0.25 } );
@@ -315,6 +308,7 @@ export const SCENES_A: SceneDef[] = [
 			c.lunaWorld( V3( x, y, 0.85 ), { sprite: 'astronaut', face: 1, bubble: c.bubbles( [ [ t0 + 0.4, c.t1, 'dizzy' ] ] ) }, mo, 0.85 );
 			const p = c.px( V3( x, y + c.luna!.height * 0.9, 0.85 ) );
 			sweat( c.hud, p.x, p.y, c.H * 0.011, c.t, 1 );
+			if ( ! c.V ) c.sx = c.W * 0.3;   // wide: keep the text clear of Luna on the top step
 			stat( c, tL, c.t1 + 0.2, 'LEG DAY', undefined, PALETTE.pink );
 		},
 	},
@@ -347,7 +341,7 @@ export const SCENES_A: SceneDef[] = [
 				const a = P[ seg ], b = P[ seg + 1 ];
 				const nx = lerp( a.x, b.x, f ) * 2 - 1, ny = - ( lerp( a.y, b.y, f ) * 2 - 1 );
 				const ang = Math.atan2( - ( b.y - a.y ) * c.H, ( b.x - a.x ) * c.W );
-				ship( c, c.screen( nx, ny, c.camDist * 0.7 ), { scale: c.lunaHeight( c.camDist * 0.7 ) * 0.3, rot: ang - Math.PI / 2, flame: 0.8, face: 'happy' } );
+				ship( c, c.screen( nx, ny, c.camDist * 0.7 ), { scale: c.lunaHeight( c.camDist * 0.7 ) * 0.17, rot: ang - Math.PI / 2, flame: 0.8, face: 'happy' } );
 			}
 		},
 	},

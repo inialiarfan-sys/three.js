@@ -100,3 +100,31 @@ export function cape( c: Stage, pos: THREE.Vector3, R: number, show: number, fal
 	m.rotation.set( 0, 0, f * 1.4 );
 	m.scale.setScalar( R * show );
 }
+
+/** Our solar system with its missing middle. Wide: one row. Vertical: rocky row, gap, giant row. Returns gap/earth positions. */
+export function solarSystem( c: Stage, t0: number, pop = true ) {
+	const w = c.w, sol = w.solar; sol.visible = true;
+	const width = sol.userData.width as number;
+	const gap = sol.userData.dashes as THREE.Group;
+	const base: number[] = ( sol.userData.baseX ??= w.solarBalls.map( ( b ) => b.position.x ) );
+	sol.rotation.set( 0, 0, 0 );
+	if ( c.V ) {
+		sol.scale.setScalar( 1 ); sol.position.set( 0, 0.4, 0 );
+		const rows = [ [ 0, 1, 2, 3 ], [ 4, 5, 6, 7 ] ];
+		rows.forEach( ( r, ri ) => r.forEach( ( k, j ) => {
+			const b = w.solarBalls[ k ];
+			b.position.set( ( j - 1.5 ) * ( ri ? 1.05 : 0.75 ), ri ? - 1.35 : 1.25, 0 );
+			b.userData.s = ri ? 0.5 : 1.25;
+		} ) );
+		gap.position.set( 0, 0, 0 );
+	} else {
+		sol.scale.setScalar( 0.8 ); sol.position.set( - width * 0.8 / 2, 0.05, 0 );
+		w.solarBalls.forEach( ( b, k ) => { b.position.set( base[ k ], 0, 0 ); b.userData.s = 1; } );
+		gap.position.set( sol.userData.gapX as number, 0, 0 );
+	}
+	w.solarBalls.forEach( ( b, i ) => { b.scale.setScalar( ( b.userData.s as number ) * ( pop ? spring( c.t - t0 - i * 0.05 ) : 1 ) ); b.children[ 0 ].rotation.y = c.t * 0.4; } );
+	gap.scale.setScalar( ( c.V ? 1.6 : 1 ) * ( pop ? spring( c.t - t0 - 0.5 ) : 1 ) * ( 1 + Math.sin( c.t * 5 ) * 0.06 ) ); gap.rotation.z = c.t * 0.5;
+	const toWorld = ( o: THREE.Object3D ) => o.getWorldPosition( new THREE.Vector3() );
+	sol.updateMatrixWorld( true );
+	return { gap: toWorld( gap ), earth: toWorld( w.solarBalls[ 2 ] ), radius: c.V ? 2.6 : width * 0.8 * 0.43, center: c.V ? V3( 0, 0.4, 0 ) : V3( 0, 0.05, 0 ), earthR: 0.27 * ( c.V ? 1.25 : 0.8 ) };
+}
