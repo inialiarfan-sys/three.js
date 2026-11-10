@@ -1,0 +1,2453 @@
+{
+ "source": "narration.mp3",
+ "model": "small.en",
+ "words": [
+  {
+   "word": "the",
+   "start": 0.0,
+   "end": 0.26
+  },
+  {
+   "word": "planet",
+   "start": 0.26,
+   "end": 0.72
+  },
+  {
+   "word": "we",
+   "start": 0.72,
+   "end": 1.04
+  },
+  {
+   "word": "are",
+   "start": 1.04,
+   "end": 1.18
+  },
+  {
+   "word": "missing.",
+   "start": 1.18,
+   "end": 1.7
+  },
+  {
+   "word": "The",
+   "start": 2.52,
+   "end": 2.66
+  },
+  {
+   "word": "most",
+   "start": 2.66,
+   "end": 2.94
+  },
+  {
+   "word": "common",
+   "start": 2.94,
+   "end": 3.38
+  },
+  {
+   "word": "planet",
+   "start": 3.38,
+   "end": 3.78
+  },
+  {
+   "word": "in",
+   "start": 3.78,
+   "end": 4.0
+  },
+  {
+   "word": "our",
+   "start": 4.0,
+   "end": 4.16
+  },
+  {
+   "word": "galaxy",
+   "start": 4.16,
+   "end": 4.7
+  },
+  {
+   "word": "is",
+   "start": 4.7,
+   "end": 5.74
+  },
+  {
+   "word": "one",
+   "start": 5.74,
+   "end": 6.0
+  },
+  {
+   "word": "we",
+   "start": 6.0,
+   "end": 6.2
+  },
+  {
+   "word": "don't",
+   "start": 6.2,
+   "end": 6.52
+  },
+  {
+   "word": "have.",
+   "start": 6.52,
+   "end": 6.96
+  },
+  {
+   "word": "Not",
+   "start": 7.48,
+   "end": 7.7
+  },
+  {
+   "word": "Mercury,",
+   "start": 7.7,
+   "end": 8.06
+  },
+  {
+   "word": "not",
+   "start": 8.7,
+   "end": 8.76
+  },
+  {
+   "word": "Jupiter,",
+   "start": 8.76,
+   "end": 9.16
+  },
+  {
+   "word": "not",
+   "start": 9.68,
+   "end": 9.86
+  },
+  {
+   "word": "Earth.",
+   "start": 9.86,
+   "end": 10.18
+  },
+  {
+   "word": "Something",
+   "start": 10.86,
+   "end": 11.06
+  },
+  {
+   "word": "in",
+   "start": 11.06,
+   "end": 11.56
+  },
+  {
+   "word": "between.",
+   "start": 11.56,
+   "end": 11.98
+  },
+  {
+   "word": "Scientists",
+   "start": 12.86,
+   "end": 13.2
+  },
+  {
+   "word": "call",
+   "start": 13.2,
+   "end": 13.64
+  },
+  {
+   "word": "it",
+   "start": 13.64,
+   "end": 13.92
+  },
+  {
+   "word": "a",
+   "start": 13.92,
+   "end": 14.08
+  },
+  {
+   "word": "super",
+   "start": 14.08,
+   "end": 14.54
+  },
+  {
+   "word": "-Earth.",
+   "start": 14.54,
+   "end": 14.84
+  },
+  {
+   "word": "No,",
+   "start": 15.34,
+   "end": 15.88
+  },
+  {
+   "word": "it",
+   "start": 16.08,
+   "end": 16.24
+  },
+  {
+   "word": "doesn't",
+   "start": 16.24,
+   "end": 16.64
+  },
+  {
+   "word": "wear",
+   "start": 16.64,
+   "end": 16.84
+  },
+  {
+   "word": "a",
+   "start": 16.84,
+   "end": 17.04
+  },
+  {
+   "word": "cape.",
+   "start": 17.04,
+   "end": 17.2
+  },
+  {
+   "word": "So",
+   "start": 17.94,
+   "end": 18.1
+  },
+  {
+   "word": "today,",
+   "start": 18.1,
+   "end": 18.42
+  },
+  {
+   "word": "we're",
+   "start": 18.66,
+   "end": 19.0
+  },
+  {
+   "word": "going",
+   "start": 19.0,
+   "end": 19.18
+  },
+  {
+   "word": "to",
+   "start": 19.18,
+   "end": 19.36
+  },
+  {
+   "word": "find",
+   "start": 19.36,
+   "end": 19.58
+  },
+  {
+   "word": "one.",
+   "start": 19.58,
+   "end": 19.88
+  },
+  {
+   "word": "Luna,",
+   "start": 20.38,
+   "end": 20.5
+  },
+  {
+   "word": "grab",
+   "start": 20.92,
+   "end": 21.1
+  },
+  {
+   "word": "your",
+   "start": 21.1,
+   "end": 21.28
+  },
+  {
+   "word": "helmet.",
+   "start": 21.28,
+   "end": 21.56
+  },
+  {
+   "word": "Let's",
+   "start": 21.98,
+   "end": 22.24
+  },
+  {
+   "word": "go",
+   "start": 22.24,
+   "end": 22.44
+  },
+  {
+   "word": "on",
+   "start": 22.44,
+   "end": 22.68
+  },
+  {
+   "word": "an",
+   "start": 22.68,
+   "end": 22.82
+  },
+  {
+   "word": "adventure!",
+   "start": 22.82,
+   "end": 23.3
+  },
+  {
+   "word": "So",
+   "start": 24.26,
+   "end": 24.64
+  },
+  {
+   "word": "what",
+   "start": 24.64,
+   "end": 25.02
+  },
+  {
+   "word": "exactly",
+   "start": 25.02,
+   "end": 25.4
+  },
+  {
+   "word": "is",
+   "start": 25.4,
+   "end": 26.04
+  },
+  {
+   "word": "a",
+   "start": 26.04,
+   "end": 26.3
+  },
+  {
+   "word": "super",
+   "start": 26.3,
+   "end": 26.62
+  },
+  {
+   "word": "-Earth?",
+   "start": 26.62,
+   "end": 26.82
+  },
+  {
+   "word": "It",
+   "start": 27.4,
+   "end": 27.6
+  },
+  {
+   "word": "is",
+   "start": 27.6,
+   "end": 27.7
+  },
+  {
+   "word": "a",
+   "start": 27.7,
+   "end": 27.86
+  },
+  {
+   "word": "planet",
+   "start": 27.86,
+   "end": 28.2
+  },
+  {
+   "word": "bigger",
+   "start": 28.2,
+   "end": 28.56
+  },
+  {
+   "word": "than",
+   "start": 28.56,
+   "end": 28.86
+  },
+  {
+   "word": "Earth,",
+   "start": 28.86,
+   "end": 29.16
+  },
+  {
+   "word": "but",
+   "start": 29.16,
+   "end": 29.62
+  },
+  {
+   "word": "smaller",
+   "start": 29.62,
+   "end": 30.12
+  },
+  {
+   "word": "than",
+   "start": 30.12,
+   "end": 30.44
+  },
+  {
+   "word": "Neptune.",
+   "start": 30.44,
+   "end": 30.84
+  },
+  {
+   "word": "Some",
+   "start": 31.6,
+   "end": 31.64
+  },
+  {
+   "word": "are",
+   "start": 31.64,
+   "end": 31.84
+  },
+  {
+   "word": "rocky,",
+   "start": 31.84,
+   "end": 32.28
+  },
+  {
+   "word": "some",
+   "start": 32.82,
+   "end": 32.94
+  },
+  {
+   "word": "may",
+   "start": 32.94,
+   "end": 33.16
+  },
+  {
+   "word": "be",
+   "start": 33.16,
+   "end": 33.3
+  },
+  {
+   "word": "covered",
+   "start": 33.3,
+   "end": 33.54
+  },
+  {
+   "word": "in",
+   "start": 33.54,
+   "end": 33.86
+  },
+  {
+   "word": "deep",
+   "start": 33.86,
+   "end": 34.14
+  },
+  {
+   "word": "oceans.",
+   "start": 34.14,
+   "end": 34.66
+  },
+  {
+   "word": "Here's",
+   "start": 35.58,
+   "end": 35.84
+  },
+  {
+   "word": "the",
+   "start": 35.84,
+   "end": 36.0
+  },
+  {
+   "word": "strange",
+   "start": 36.0,
+   "end": 36.36
+  },
+  {
+   "word": "part.",
+   "start": 36.36,
+   "end": 36.78
+  },
+  {
+   "word": "When",
+   "start": 37.34,
+   "end": 37.5
+  },
+  {
+   "word": "scientists",
+   "start": 37.5,
+   "end": 37.96
+  },
+  {
+   "word": "started",
+   "start": 37.96,
+   "end": 38.34
+  },
+  {
+   "word": "finding",
+   "start": 38.34,
+   "end": 38.74
+  },
+  {
+   "word": "planets",
+   "start": 38.74,
+   "end": 39.18
+  },
+  {
+   "word": "around",
+   "start": 39.18,
+   "end": 39.46
+  },
+  {
+   "word": "other",
+   "start": 39.46,
+   "end": 39.78
+  },
+  {
+   "word": "stars,",
+   "start": 39.78,
+   "end": 40.28
+  },
+  {
+   "word": "they",
+   "start": 40.66,
+   "end": 40.84
+  },
+  {
+   "word": "kept",
+   "start": 40.84,
+   "end": 41.16
+  },
+  {
+   "word": "finding",
+   "start": 41.16,
+   "end": 41.68
+  },
+  {
+   "word": "super",
+   "start": 41.68,
+   "end": 42.2
+  },
+  {
+   "word": "-Earths.",
+   "start": 42.2,
+   "end": 42.64
+  },
+  {
+   "word": "Again",
+   "start": 42.94,
+   "end": 43.34
+  },
+  {
+   "word": "and",
+   "start": 43.34,
+   "end": 43.7
+  },
+  {
+   "word": "again.",
+   "start": 43.7,
+   "end": 44.1
+  },
+  {
+   "word": "It",
+   "start": 44.68,
+   "end": 44.84
+  },
+  {
+   "word": "is",
+   "start": 44.84,
+   "end": 44.96
+  },
+  {
+   "word": "the",
+   "start": 44.96,
+   "end": 45.1
+  },
+  {
+   "word": "most",
+   "start": 45.1,
+   "end": 45.34
+  },
+  {
+   "word": "common",
+   "start": 45.34,
+   "end": 45.84
+  },
+  {
+   "word": "kind",
+   "start": 45.84,
+   "end": 46.06
+  },
+  {
+   "word": "of",
+   "start": 46.06,
+   "end": 46.28
+  },
+  {
+   "word": "planet",
+   "start": 46.28,
+   "end": 46.52
+  },
+  {
+   "word": "found",
+   "start": 46.52,
+   "end": 46.84
+  },
+  {
+   "word": "so",
+   "start": 46.84,
+   "end": 47.16
+  },
+  {
+   "word": "far.",
+   "start": 47.16,
+   "end": 47.48
+  },
+  {
+   "word": "But",
+   "start": 48.04,
+   "end": 48.32
+  },
+  {
+   "word": "in",
+   "start": 48.32,
+   "end": 48.58
+  },
+  {
+   "word": "our",
+   "start": 48.58,
+   "end": 48.96
+  },
+  {
+   "word": "solar",
+   "start": 48.96,
+   "end": 49.22
+  },
+  {
+   "word": "system,",
+   "start": 49.22,
+   "end": 49.74
+  },
+  {
+   "word": "there",
+   "start": 50.14,
+   "end": 50.3
+  },
+  {
+   "word": "are",
+   "start": 50.3,
+   "end": 50.5
+  },
+  {
+   "word": "none.",
+   "start": 50.5,
+   "end": 50.72
+  },
+  {
+   "word": "We",
+   "start": 51.32,
+   "end": 51.5
+  },
+  {
+   "word": "got",
+   "start": 51.5,
+   "end": 51.66
+  },
+  {
+   "word": "small",
+   "start": 51.66,
+   "end": 52.04
+  },
+  {
+   "word": "planets,",
+   "start": 52.04,
+   "end": 52.46
+  },
+  {
+   "word": "we",
+   "start": 52.82,
+   "end": 52.92
+  },
+  {
+   "word": "got",
+   "start": 52.92,
+   "end": 53.14
+  },
+  {
+   "word": "giant",
+   "start": 53.14,
+   "end": 53.58
+  },
+  {
+   "word": "planets,",
+   "start": 53.58,
+   "end": 54.08
+  },
+  {
+   "word": "but",
+   "start": 54.08,
+   "end": 54.68
+  },
+  {
+   "word": "no",
+   "start": 54.68,
+   "end": 54.96
+  },
+  {
+   "word": "medium.",
+   "start": 54.96,
+   "end": 55.5
+  },
+  {
+   "word": "It's",
+   "start": 56.7,
+   "end": 56.82
+  },
+  {
+   "word": "like",
+   "start": 56.82,
+   "end": 56.98
+  },
+  {
+   "word": "ordering",
+   "start": 56.98,
+   "end": 57.34
+  },
+  {
+   "word": "fries",
+   "start": 57.34,
+   "end": 57.76
+  },
+  {
+   "word": "and",
+   "start": 57.76,
+   "end": 58.2
+  },
+  {
+   "word": "they",
+   "start": 58.2,
+   "end": 58.34
+  },
+  {
+   "word": "ran",
+   "start": 58.34,
+   "end": 58.58
+  },
+  {
+   "word": "out",
+   "start": 58.58,
+   "end": 58.74
+  },
+  {
+   "word": "of",
+   "start": 58.74,
+   "end": 58.88
+  },
+  {
+   "word": "medium.",
+   "start": 58.88,
+   "end": 59.3
+  },
+  {
+   "word": "Okay",
+   "start": 60.16,
+   "end": 60.2
+  },
+  {
+   "word": "Luna,",
+   "start": 60.2,
+   "end": 60.38
+  },
+  {
+   "word": "let's",
+   "start": 60.86,
+   "end": 61.1
+  },
+  {
+   "word": "land",
+   "start": 61.1,
+   "end": 61.26
+  },
+  {
+   "word": "on",
+   "start": 61.26,
+   "end": 61.48
+  },
+  {
+   "word": "one.",
+   "start": 61.48,
+   "end": 61.86
+  },
+  {
+   "word": "Careful!",
+   "start": 62.42,
+   "end": 62.96
+  },
+  {
+   "word": "The",
+   "start": 63.28,
+   "end": 63.44
+  },
+  {
+   "word": "gravity",
+   "start": 63.44,
+   "end": 63.78
+  },
+  {
+   "word": "here",
+   "start": 63.78,
+   "end": 64.16
+  },
+  {
+   "word": "is",
+   "start": 64.16,
+   "end": 64.34
+  },
+  {
+   "word": "strong!",
+   "start": 64.34,
+   "end": 64.8
+  },
+  {
+   "word": "A",
+   "start": 65.68,
+   "end": 65.82
+  },
+  {
+   "word": "super",
+   "start": 65.82,
+   "end": 66.12
+  },
+  {
+   "word": "-Earth",
+   "start": 66.12,
+   "end": 66.4
+  },
+  {
+   "word": "can",
+   "start": 66.4,
+   "end": 66.64
+  },
+  {
+   "word": "be",
+   "start": 66.64,
+   "end": 66.94
+  },
+  {
+   "word": "much",
+   "start": 66.94,
+   "end": 67.16
+  },
+  {
+   "word": "heavier",
+   "start": 67.16,
+   "end": 67.54
+  },
+  {
+   "word": "than",
+   "start": 67.54,
+   "end": 67.8
+  },
+  {
+   "word": "our",
+   "start": 67.8,
+   "end": 67.98
+  },
+  {
+   "word": "planet.",
+   "start": 67.98,
+   "end": 68.32
+  },
+  {
+   "word": "On",
+   "start": 68.76,
+   "end": 68.9
+  },
+  {
+   "word": "some,",
+   "start": 68.9,
+   "end": 69.24
+  },
+  {
+   "word": "you",
+   "start": 69.52,
+   "end": 69.62
+  },
+  {
+   "word": "could",
+   "start": 69.62,
+   "end": 69.74
+  },
+  {
+   "word": "feel",
+   "start": 69.74,
+   "end": 69.98
+  },
+  {
+   "word": "twice",
+   "start": 69.98,
+   "end": 70.34
+  },
+  {
+   "word": "as",
+   "start": 70.34,
+   "end": 70.62
+  },
+  {
+   "word": "heavy.",
+   "start": 70.62,
+   "end": 70.94
+  },
+  {
+   "word": "So",
+   "start": 71.5,
+   "end": 71.78
+  },
+  {
+   "word": "if",
+   "start": 71.78,
+   "end": 72.1
+  },
+  {
+   "word": "your",
+   "start": 72.1,
+   "end": 72.34
+  },
+  {
+   "word": "weighing",
+   "start": 72.34,
+   "end": 72.6
+  },
+  {
+   "word": "scale",
+   "start": 72.6,
+   "end": 73.0
+  },
+  {
+   "word": "gives",
+   "start": 73.0,
+   "end": 73.24
+  },
+  {
+   "word": "you",
+   "start": 73.24,
+   "end": 73.44
+  },
+  {
+   "word": "a",
+   "start": 73.44,
+   "end": 73.62
+  },
+  {
+   "word": "scary",
+   "start": 73.62,
+   "end": 74.02
+  },
+  {
+   "word": "number,",
+   "start": 74.02,
+   "end": 74.48
+  },
+  {
+   "word": "don't",
+   "start": 74.96,
+   "end": 75.6
+  },
+  {
+   "word": "blame",
+   "start": 75.6,
+   "end": 75.78
+  },
+  {
+   "word": "the",
+   "start": 75.78,
+   "end": 75.98
+  },
+  {
+   "word": "scale.",
+   "start": 75.98,
+   "end": 76.3
+  },
+  {
+   "word": "Blame",
+   "start": 76.8,
+   "end": 76.94
+  },
+  {
+   "word": "the",
+   "start": 76.94,
+   "end": 77.1
+  },
+  {
+   "word": "planet.",
+   "start": 77.1,
+   "end": 77.48
+  },
+  {
+   "word": "Every",
+   "start": 78.14,
+   "end": 78.46
+  },
+  {
+   "word": "staircase",
+   "start": 78.46,
+   "end": 79.0
+  },
+  {
+   "word": "would",
+   "start": 79.0,
+   "end": 79.4
+  },
+  {
+   "word": "be",
+   "start": 79.4,
+   "end": 79.72
+  },
+  {
+   "word": "leg",
+   "start": 79.72,
+   "end": 79.92
+  },
+  {
+   "word": "day.",
+   "start": 79.92,
+   "end": 80.24
+  },
+  {
+   "word": "Come",
+   "start": 80.24,
+   "end": 81.04
+  },
+  {
+   "word": "on",
+   "start": 81.04,
+   "end": 81.26
+  },
+  {
+   "word": "Luna,",
+   "start": 81.26,
+   "end": 81.4
+  },
+  {
+   "word": "let's",
+   "start": 81.82,
+   "end": 82.04
+  },
+  {
+   "word": "visit",
+   "start": 82.04,
+   "end": 82.22
+  },
+  {
+   "word": "a",
+   "start": 82.22,
+   "end": 82.38
+  },
+  {
+   "word": "few",
+   "start": 82.38,
+   "end": 82.54
+  },
+  {
+   "word": "more.",
+   "start": 82.54,
+   "end": 82.88
+  },
+  {
+   "word": "First,",
+   "start": 83.8,
+   "end": 83.8
+  },
+  {
+   "word": "55",
+   "start": 84.12,
+   "end": 84.64
+  },
+  {
+   "word": "Cancri",
+   "start": 84.64,
+   "end": 85.24
+  },
+  {
+   "word": "E.",
+   "start": 85.24,
+   "end": 85.54
+  },
+  {
+   "word": "It",
+   "start": 86.04,
+   "end": 86.16
+  },
+  {
+   "word": "is",
+   "start": 86.16,
+   "end": 86.3
+  },
+  {
+   "word": "so",
+   "start": 86.3,
+   "end": 86.68
+  },
+  {
+   "word": "close",
+   "start": 86.68,
+   "end": 86.96
+  },
+  {
+   "word": "to",
+   "start": 86.96,
+   "end": 87.2
+  },
+  {
+   "word": "its",
+   "start": 87.2,
+   "end": 87.32
+  },
+  {
+   "word": "star",
+   "start": 87.32,
+   "end": 87.66
+  },
+  {
+   "word": "that",
+   "start": 87.66,
+   "end": 87.92
+  },
+  {
+   "word": "its",
+   "start": 87.92,
+   "end": 88.08
+  },
+  {
+   "word": "surface",
+   "start": 88.08,
+   "end": 88.54
+  },
+  {
+   "word": "may",
+   "start": 88.54,
+   "end": 88.78
+  },
+  {
+   "word": "be",
+   "start": 88.78,
+   "end": 88.96
+  },
+  {
+   "word": "covered",
+   "start": 88.96,
+   "end": 89.3
+  },
+  {
+   "word": "in",
+   "start": 89.3,
+   "end": 89.64
+  },
+  {
+   "word": "lava.",
+   "start": 89.64,
+   "end": 89.96
+  },
+  {
+   "word": "Watch",
+   "start": 90.68,
+   "end": 90.86
+  },
+  {
+   "word": "your",
+   "start": 90.86,
+   "end": 91.02
+  },
+  {
+   "word": "step",
+   "start": 91.02,
+   "end": 91.32
+  },
+  {
+   "word": "Luna.",
+   "start": 91.32,
+   "end": 91.56
+  },
+  {
+   "word": "Not",
+   "start": 92.62,
+   "end": 92.74
+  },
+  {
+   "word": "a",
+   "start": 92.74,
+   "end": 92.88
+  },
+  {
+   "word": "great",
+   "start": 92.88,
+   "end": 93.08
+  },
+  {
+   "word": "place",
+   "start": 93.08,
+   "end": 93.34
+  },
+  {
+   "word": "for",
+   "start": 93.34,
+   "end": 93.54
+  },
+  {
+   "word": "a",
+   "start": 93.54,
+   "end": 93.68
+  },
+  {
+   "word": "beach",
+   "start": 93.68,
+   "end": 93.84
+  },
+  {
+   "word": "holiday.",
+   "start": 93.84,
+   "end": 94.22
+  },
+  {
+   "word": "Unless",
+   "start": 94.72,
+   "end": 94.94
+  },
+  {
+   "word": "you",
+   "start": 94.94,
+   "end": 95.16
+  },
+  {
+   "word": "like",
+   "start": 95.16,
+   "end": 95.34
+  },
+  {
+   "word": "your",
+   "start": 95.34,
+   "end": 95.52
+  },
+  {
+   "word": "feet",
+   "start": 95.52,
+   "end": 95.8
+  },
+  {
+   "word": "extra",
+   "start": 95.8,
+   "end": 96.36
+  },
+  {
+   "word": "crispy.",
+   "start": 96.36,
+   "end": 96.68
+  },
+  {
+   "word": "Next,",
+   "start": 97.54,
+   "end": 97.92
+  },
+  {
+   "word": "LHS",
+   "start": 98.28,
+   "end": 98.98
+  },
+  {
+   "word": "1140B.",
+   "start": 98.98,
+   "end": 100.44
+  },
+  {
+   "word": "Not",
+   "start": 101.08,
+   "end": 101.12
+  },
+  {
+   "word": "too",
+   "start": 101.12,
+   "end": 101.3
+  },
+  {
+   "word": "hot,",
+   "start": 101.3,
+   "end": 101.66
+  },
+  {
+   "word": "not",
+   "start": 102.06,
+   "end": 102.18
+  },
+  {
+   "word": "too",
+   "start": 102.18,
+   "end": 102.4
+  },
+  {
+   "word": "cold.",
+   "start": 102.4,
+   "end": 102.78
+  },
+  {
+   "word": "Scientists",
+   "start": 103.38,
+   "end": 103.64
+  },
+  {
+   "word": "think",
+   "start": 103.64,
+   "end": 104.02
+  },
+  {
+   "word": "it",
+   "start": 104.02,
+   "end": 104.24
+  },
+  {
+   "word": "might",
+   "start": 104.24,
+   "end": 104.5
+  },
+  {
+   "word": "be",
+   "start": 104.5,
+   "end": 104.7
+  },
+  {
+   "word": "an",
+   "start": 104.7,
+   "end": 104.84
+  },
+  {
+   "word": "ice",
+   "start": 104.84,
+   "end": 105.14
+  },
+  {
+   "word": "world.",
+   "start": 105.14,
+   "end": 105.56
+  },
+  {
+   "word": "Maybe",
+   "start": 105.92,
+   "end": 106.12
+  },
+  {
+   "word": "with",
+   "start": 106.12,
+   "end": 106.4
+  },
+  {
+   "word": "an",
+   "start": 106.4,
+   "end": 106.52
+  },
+  {
+   "word": "ocean",
+   "start": 106.52,
+   "end": 106.84
+  },
+  {
+   "word": "of",
+   "start": 106.84,
+   "end": 107.12
+  },
+  {
+   "word": "liquid",
+   "start": 107.12,
+   "end": 107.36
+  },
+  {
+   "word": "water",
+   "start": 107.36,
+   "end": 107.82
+  },
+  {
+   "word": "under",
+   "start": 107.82,
+   "end": 108.1
+  },
+  {
+   "word": "the",
+   "start": 108.1,
+   "end": 108.34
+  },
+  {
+   "word": "ice.",
+   "start": 108.34,
+   "end": 108.68
+  },
+  {
+   "word": "Bring",
+   "start": 109.22,
+   "end": 109.32
+  },
+  {
+   "word": "a",
+   "start": 109.32,
+   "end": 109.44
+  },
+  {
+   "word": "jacket",
+   "start": 109.44,
+   "end": 109.7
+  },
+  {
+   "word": "Luna.",
+   "start": 109.7,
+   "end": 109.94
+  },
+  {
+   "word": "Actually,",
+   "start": 111.02,
+   "end": 111.02
+  },
+  {
+   "word": "bring",
+   "start": 111.48,
+   "end": 111.52
+  },
+  {
+   "word": "10.",
+   "start": 111.52,
+   "end": 111.9
+  },
+  {
+   "word": "And",
+   "start": 112.68,
+   "end": 112.8
+  },
+  {
+   "word": "now,",
+   "start": 112.8,
+   "end": 113.12
+  },
+  {
+   "word": "our",
+   "start": 113.38,
+   "end": 113.58
+  },
+  {
+   "word": "last",
+   "start": 113.58,
+   "end": 113.84
+  },
+  {
+   "word": "stop.",
+   "start": 113.84,
+   "end": 114.22
+  },
+  {
+   "word": "K2",
+   "start": 114.8,
+   "end": 115.2
+  },
+  {
+   "word": "-18B.",
+   "start": 115.2,
+   "end": 116.06
+  },
+  {
+   "word": "Some",
+   "start": 116.74,
+   "end": 116.82
+  },
+  {
+   "word": "scientists",
+   "start": 116.82,
+   "end": 117.3
+  },
+  {
+   "word": "think",
+   "start": 117.3,
+   "end": 117.6
+  },
+  {
+   "word": "it",
+   "start": 117.6,
+   "end": 117.84
+  },
+  {
+   "word": "could",
+   "start": 117.84,
+   "end": 118.1
+  },
+  {
+   "word": "be",
+   "start": 118.1,
+   "end": 118.3
+  },
+  {
+   "word": "a",
+   "start": 118.3,
+   "end": 118.62
+  },
+  {
+   "word": "giant",
+   "start": 118.62,
+   "end": 118.94
+  },
+  {
+   "word": "ocean",
+   "start": 118.94,
+   "end": 119.48
+  },
+  {
+   "word": "world.",
+   "start": 119.48,
+   "end": 119.9
+  },
+  {
+   "word": "In",
+   "start": 120.32,
+   "end": 120.5
+  },
+  {
+   "word": "2025,",
+   "start": 120.5,
+   "end": 121.14
+  },
+  {
+   "word": "a",
+   "start": 121.72,
+   "end": 121.78
+  },
+  {
+   "word": "team",
+   "start": 121.78,
+   "end": 121.98
+  },
+  {
+   "word": "reported",
+   "start": 121.98,
+   "end": 122.4
+  },
+  {
+   "word": "a",
+   "start": 122.4,
+   "end": 122.68
+  },
+  {
+   "word": "possible",
+   "start": 122.68,
+   "end": 123.14
+  },
+  {
+   "word": "hint",
+   "start": 123.14,
+   "end": 123.44
+  },
+  {
+   "word": "of",
+   "start": 123.44,
+   "end": 123.62
+  },
+  {
+   "word": "a",
+   "start": 123.62,
+   "end": 123.76
+  },
+  {
+   "word": "gas",
+   "start": 123.76,
+   "end": 124.04
+  },
+  {
+   "word": "that,",
+   "start": 124.04,
+   "end": 124.46
+  },
+  {
+   "word": "on",
+   "start": 124.64,
+   "end": 124.74
+  },
+  {
+   "word": "Earth,",
+   "start": 124.74,
+   "end": 125.06
+  },
+  {
+   "word": "is",
+   "start": 125.42,
+   "end": 125.56
+  },
+  {
+   "word": "made",
+   "start": 125.56,
+   "end": 125.78
+  },
+  {
+   "word": "by",
+   "start": 125.78,
+   "end": 126.02
+  },
+  {
+   "word": "living",
+   "start": 126.02,
+   "end": 126.32
+  },
+  {
+   "word": "things.",
+   "start": 126.32,
+   "end": 126.88
+  },
+  {
+   "word": "Let's",
+   "start": 127.4,
+   "end": 127.64
+  },
+  {
+   "word": "take",
+   "start": 127.64,
+   "end": 127.76
+  },
+  {
+   "word": "a",
+   "start": 127.76,
+   "end": 127.9
+  },
+  {
+   "word": "closer",
+   "start": 127.9,
+   "end": 128.18
+  },
+  {
+   "word": "look.",
+   "start": 128.18,
+   "end": 128.48
+  },
+  {
+   "word": "Luna,",
+   "start": 129.28,
+   "end": 129.28
+  },
+  {
+   "word": "dive",
+   "start": 129.76,
+   "end": 129.9
+  },
+  {
+   "word": "in.",
+   "start": 129.9,
+   "end": 130.26
+  },
+  {
+   "word": "Slowly.",
+   "start": 130.9,
+   "end": 131.2
+  },
+  {
+   "word": "It's",
+   "start": 132.0,
+   "end": 132.24
+  },
+  {
+   "word": "dark",
+   "start": 132.24,
+   "end": 132.46
+  },
+  {
+   "word": "down",
+   "start": 132.46,
+   "end": 132.74
+  },
+  {
+   "word": "here.",
+   "start": 132.74,
+   "end": 133.08
+  },
+  {
+   "word": "Very",
+   "start": 133.72,
+   "end": 133.98
+  },
+  {
+   "word": "quiet.",
+   "start": 133.98,
+   "end": 134.48
+  },
+  {
+   "word": "Wait,",
+   "start": 135.26,
+   "end": 135.36
+  },
+  {
+   "word": "did",
+   "start": 135.86,
+   "end": 135.98
+  },
+  {
+   "word": "you",
+   "start": 135.98,
+   "end": 136.14
+  },
+  {
+   "word": "see",
+   "start": 136.14,
+   "end": 136.3
+  },
+  {
+   "word": "that?",
+   "start": 136.3,
+   "end": 136.54
+  },
+  {
+   "word": "Something",
+   "start": 136.92,
+   "end": 137.24
+  },
+  {
+   "word": "is",
+   "start": 137.24,
+   "end": 137.46
+  },
+  {
+   "word": "moving.",
+   "start": 137.46,
+   "end": 137.76
+  },
+  {
+   "word": "Something",
+   "start": 138.46,
+   "end": 138.64
+  },
+  {
+   "word": "big.",
+   "start": 138.64,
+   "end": 139.12
+  },
+  {
+   "word": "Luna,",
+   "start": 140.0,
+   "end": 140.0
+  },
+  {
+   "word": "don't",
+   "start": 140.4,
+   "end": 140.68
+  },
+  {
+   "word": "move.",
+   "start": 140.68,
+   "end": 141.06
+  },
+  {
+   "word": "It's",
+   "start": 141.5,
+   "end": 141.68
+  },
+  {
+   "word": "looking",
+   "start": 141.68,
+   "end": 141.94
+  },
+  {
+   "word": "at",
+   "start": 141.94,
+   "end": 142.24
+  },
+  {
+   "word": "us.",
+   "start": 142.24,
+   "end": 142.56
+  },
+  {
+   "word": "Run",
+   "start": 143.0,
+   "end": 143.16
+  },
+  {
+   "word": "Luna!",
+   "start": 143.16,
+   "end": 143.44
+  },
+  {
+   "word": "Back",
+   "start": 143.88,
+   "end": 144.02
+  },
+  {
+   "word": "to",
+   "start": 144.02,
+   "end": 144.16
+  },
+  {
+   "word": "the",
+   "start": 144.16,
+   "end": 144.3
+  },
+  {
+   "word": "spaceship!",
+   "start": 144.3,
+   "end": 144.58
+  },
+  {
+   "word": "Go,",
+   "start": 145.0,
+   "end": 145.16
+  },
+  {
+   "word": "go,",
+   "start": 145.26,
+   "end": 145.32
+  },
+  {
+   "word": "go!",
+   "start": 145.4,
+   "end": 145.6
+  },
+  {
+   "word": "That",
+   "start": 147.5,
+   "end": 148.1
+  },
+  {
+   "word": "was",
+   "start": 148.1,
+   "end": 148.7
+  },
+  {
+   "word": "close.",
+   "start": 148.7,
+   "end": 149.12
+  },
+  {
+   "word": "Okay,",
+   "start": 149.96,
+   "end": 150.24
+  },
+  {
+   "word": "let's",
+   "start": 150.68,
+   "end": 151.04
+  },
+  {
+   "word": "be",
+   "start": 151.04,
+   "end": 151.18
+  },
+  {
+   "word": "honest.",
+   "start": 151.18,
+   "end": 151.5
+  },
+  {
+   "word": "That",
+   "start": 151.98,
+   "end": 152.2
+  },
+  {
+   "word": "creature",
+   "start": 152.2,
+   "end": 152.48
+  },
+  {
+   "word": "was",
+   "start": 152.48,
+   "end": 152.98
+  },
+  {
+   "word": "only",
+   "start": 152.98,
+   "end": 153.36
+  },
+  {
+   "word": "our",
+   "start": 153.36,
+   "end": 153.62
+  },
+  {
+   "word": "imagination.",
+   "start": 153.62,
+   "end": 154.12
+  },
+  {
+   "word": "Many",
+   "start": 155.0,
+   "end": 155.14
+  },
+  {
+   "word": "scientists",
+   "start": 155.14,
+   "end": 155.64
+  },
+  {
+   "word": "say",
+   "start": 155.64,
+   "end": 155.94
+  },
+  {
+   "word": "the",
+   "start": 155.94,
+   "end": 156.12
+  },
+  {
+   "word": "evidence",
+   "start": 156.12,
+   "end": 156.5
+  },
+  {
+   "word": "for",
+   "start": 156.5,
+   "end": 156.76
+  },
+  {
+   "word": "life",
+   "start": 156.76,
+   "end": 157.0
+  },
+  {
+   "word": "there",
+   "start": 157.0,
+   "end": 157.28
+  },
+  {
+   "word": "is",
+   "start": 157.28,
+   "end": 157.54
+  },
+  {
+   "word": "still",
+   "start": 157.54,
+   "end": 157.84
+  },
+  {
+   "word": "weak.",
+   "start": 157.84,
+   "end": 158.16
+  },
+  {
+   "word": "Nobody",
+   "start": 158.16,
+   "end": 158.92
+  },
+  {
+   "word": "has",
+   "start": 158.92,
+   "end": 159.26
+  },
+  {
+   "word": "found",
+   "start": 159.26,
+   "end": 159.52
+  },
+  {
+   "word": "life",
+   "start": 159.52,
+   "end": 159.74
+  },
+  {
+   "word": "on",
+   "start": 159.74,
+   "end": 159.94
+  },
+  {
+   "word": "these",
+   "start": 159.94,
+   "end": 160.1
+  },
+  {
+   "word": "planets.",
+   "start": 160.1,
+   "end": 160.5
+  },
+  {
+   "word": "Not",
+   "start": 161.08,
+   "end": 161.14
+  },
+  {
+   "word": "yet.",
+   "start": 161.14,
+   "end": 161.42
+  },
+  {
+   "word": "But",
+   "start": 162.02,
+   "end": 162.16
+  },
+  {
+   "word": "scientists",
+   "start": 162.16,
+   "end": 162.8
+  },
+  {
+   "word": "are",
+   "start": 162.8,
+   "end": 163.16
+  },
+  {
+   "word": "still",
+   "start": 163.16,
+   "end": 163.5
+  },
+  {
+   "word": "looking.",
+   "start": 163.5,
+   "end": 163.88
+  },
+  {
+   "word": "Think",
+   "start": 164.58,
+   "end": 164.72
+  },
+  {
+   "word": "about",
+   "start": 164.72,
+   "end": 164.96
+  },
+  {
+   "word": "it.",
+   "start": 164.96,
+   "end": 165.22
+  },
+  {
+   "word": "The",
+   "start": 165.5,
+   "end": 165.58
+  },
+  {
+   "word": "most",
+   "start": 165.58,
+   "end": 165.8
+  },
+  {
+   "word": "common",
+   "start": 165.8,
+   "end": 166.3
+  },
+  {
+   "word": "planet",
+   "start": 166.3,
+   "end": 166.64
+  },
+  {
+   "word": "out",
+   "start": 166.64,
+   "end": 166.92
+  },
+  {
+   "word": "there",
+   "start": 166.92,
+   "end": 167.2
+  },
+  {
+   "word": "is",
+   "start": 167.2,
+   "end": 167.5
+  },
+  {
+   "word": "the",
+   "start": 167.5,
+   "end": 167.66
+  },
+  {
+   "word": "one",
+   "start": 167.66,
+   "end": 167.8
+  },
+  {
+   "word": "we",
+   "start": 167.8,
+   "end": 168.0
+  },
+  {
+   "word": "don't",
+   "start": 168.0,
+   "end": 168.28
+  },
+  {
+   "word": "even",
+   "start": 168.28,
+   "end": 168.52
+  },
+  {
+   "word": "have.",
+   "start": 168.52,
+   "end": 168.94
+  },
+  {
+   "word": "Which",
+   "start": 169.48,
+   "end": 169.6
+  },
+  {
+   "word": "means",
+   "start": 169.6,
+   "end": 169.92
+  },
+  {
+   "word": "our",
+   "start": 169.92,
+   "end": 170.38
+  },
+  {
+   "word": "solar",
+   "start": 170.38,
+   "end": 170.68
+  },
+  {
+   "word": "system",
+   "start": 170.68,
+   "end": 171.22
+  },
+  {
+   "word": "might",
+   "start": 171.22,
+   "end": 171.64
+  },
+  {
+   "word": "be",
+   "start": 171.64,
+   "end": 171.9
+  },
+  {
+   "word": "the",
+   "start": 171.9,
+   "end": 172.06
+  },
+  {
+   "word": "unusual",
+   "start": 172.06,
+   "end": 172.48
+  },
+  {
+   "word": "one.",
+   "start": 172.48,
+   "end": 172.94
+  },
+  {
+   "word": "And",
+   "start": 173.16,
+   "end": 173.36
+  },
+  {
+   "word": "Earth",
+   "start": 173.36,
+   "end": 173.7
+  },
+  {
+   "word": "might",
+   "start": 173.7,
+   "end": 174.04
+  },
+  {
+   "word": "be",
+   "start": 174.04,
+   "end": 174.26
+  },
+  {
+   "word": "rarer",
+   "start": 174.26,
+   "end": 174.84
+  },
+  {
+   "word": "than",
+   "start": 174.84,
+   "end": 175.02
+  },
+  {
+   "word": "we",
+   "start": 175.02,
+   "end": 175.2
+  },
+  {
+   "word": "ever",
+   "start": 175.2,
+   "end": 175.6
+  },
+  {
+   "word": "imagined.",
+   "start": 175.6,
+   "end": 176.2
+  },
+  {
+   "word": "And",
+   "start": 176.96,
+   "end": 177.08
+  },
+  {
+   "word": "here's",
+   "start": 177.08,
+   "end": 177.4
+  },
+  {
+   "word": "the",
+   "start": 177.4,
+   "end": 177.56
+  },
+  {
+   "word": "thing.",
+   "start": 177.56,
+   "end": 177.8
+  },
+  {
+   "word": "Billions",
+   "start": 178.64,
+   "end": 179.08
+  },
+  {
+   "word": "of",
+   "start": 179.08,
+   "end": 179.3
+  },
+  {
+   "word": "planets,",
+   "start": 179.3,
+   "end": 179.78
+  },
+  {
+   "word": "and",
+   "start": 180.2,
+   "end": 180.42
+  },
+  {
+   "word": "not",
+   "start": 180.42,
+   "end": 180.62
+  },
+  {
+   "word": "one",
+   "start": 180.62,
+   "end": 180.98
+  },
+  {
+   "word": "of",
+   "start": 180.98,
+   "end": 181.1
+  },
+  {
+   "word": "them,",
+   "start": 181.1,
+   "end": 181.3
+  },
+  {
+   "word": "can",
+   "start": 181.3,
+   "end": 181.5
+  },
+  {
+   "word": "care.",
+   "start": 181.5,
+   "end": 181.88
+  },
+  {
+   "word": "But",
+   "start": 182.46,
+   "end": 182.7
+  },
+  {
+   "word": "you",
+   "start": 182.7,
+   "end": 182.94
+  },
+  {
+   "word": "can.",
+   "start": 182.94,
+   "end": 183.28
+  },
+  {
+   "word": "Don't",
+   "start": 183.86,
+   "end": 184.12
+  },
+  {
+   "word": "ever",
+   "start": 184.12,
+   "end": 184.5
+  },
+  {
+   "word": "forget",
+   "start": 184.5,
+   "end": 184.9
+  },
+  {
+   "word": "how",
+   "start": 184.9,
+   "end": 185.2
+  },
+  {
+   "word": "special",
+   "start": 185.2,
+   "end": 185.66
+  },
+  {
+   "word": "that",
+   "start": 185.66,
+   "end": 185.86
+  },
+  {
+   "word": "makes",
+   "start": 185.86,
+   "end": 186.1
+  },
+  {
+   "word": "you.",
+   "start": 186.1,
+   "end": 186.48
+  },
+  {
+   "word": "Space",
+   "start": 186.94,
+   "end": 187.34
+  },
+  {
+   "word": "is",
+   "start": 187.34,
+   "end": 187.76
+  },
+  {
+   "word": "truly",
+   "start": 187.76,
+   "end": 188.28
+  },
+  {
+   "word": "amazing.",
+   "start": 188.28,
+   "end": 188.92
+  },
+  {
+   "word": "And",
+   "start": 189.62,
+   "end": 189.72
+  },
+  {
+   "word": "this",
+   "start": 189.72,
+   "end": 189.98
+  },
+  {
+   "word": "is",
+   "start": 189.98,
+   "end": 190.44
+  },
+  {
+   "word": "only",
+   "start": 190.44,
+   "end": 190.78
+  },
+  {
+   "word": "the",
+   "start": 190.78,
+   "end": 191.04
+  },
+  {
+   "word": "beginning.",
+   "start": 191.04,
+   "end": 191.34
+  }
+ ],
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 6.96,
+   "text": "the planet we are missing. The most common planet in our galaxy is one we don't have."
+  },
+  {
+   "start": 7.48,
+   "end": 14.84,
+   "text": "Not Mercury, not Jupiter, not Earth. Something in between. Scientists call it a super-Earth."
+  },
+  {
+   "start": 15.34,
+   "end": 21.56,
+   "text": "No, it doesn't wear a cape. So today, we're going to find one. Luna, grab your helmet."
+  },
+  {
+   "start": 21.98,
+   "end": 29.16,
+   "text": "Let's go on an adventure! So what exactly is a super-Earth? It is a planet bigger than Earth,"
+  },
+  {
+   "start": 29.16,
+   "end": 34.66,
+   "text": "but smaller than Neptune. Some are rocky, some may be covered in deep oceans."
+  },
+  {
+   "start": 35.58,
+   "end": 40.28,
+   "text": "Here's the strange part. When scientists started finding planets around other stars,"
+  },
+  {
+   "start": 40.66,
+   "end": 47.48,
+   "text": "they kept finding super-Earths. Again and again. It is the most common kind of planet found so far."
+  },
+  {
+   "start": 48.04,
+   "end": 54.08,
+   "text": "But in our solar system, there are none. We got small planets, we got giant planets,"
+  },
+  {
+   "start": 54.08,
+   "end": 59.3,
+   "text": "but no medium. It's like ordering fries and they ran out of medium."
+  },
+  {
+   "start": 60.16,
+   "end": 64.8,
+   "text": "Okay Luna, let's land on one. Careful! The gravity here is strong!"
+  },
+  {
+   "start": 65.68,
+   "end": 70.94,
+   "text": "A super-Earth can be much heavier than our planet. On some, you could feel twice as heavy."
+  },
+  {
+   "start": 71.5,
+   "end": 76.3,
+   "text": "So if your weighing scale gives you a scary number, don't blame the scale."
+  },
+  {
+   "start": 76.8,
+   "end": 80.24,
+   "text": "Blame the planet. Every staircase would be leg day."
+  },
+  {
+   "start": 80.24,
+   "end": 87.32,
+   "text": "Come on Luna, let's visit a few more. First, 55 Cancri E. It is so close to its"
+  },
+  {
+   "start": 87.32,
+   "end": 93.54,
+   "text": "star that its surface may be covered in lava. Watch your step Luna. Not a great place for"
+  },
+  {
+   "start": 93.54,
+   "end": 101.66,
+   "text": "a beach holiday. Unless you like your feet extra crispy. Next, LHS 1140B. Not too hot,"
+  },
+  {
+   "start": 102.06,
+   "end": 107.82,
+   "text": "not too cold. Scientists think it might be an ice world. Maybe with an ocean of liquid water"
+  },
+  {
+   "start": 107.82,
+   "end": 116.06,
+   "text": "under the ice. Bring a jacket Luna. Actually, bring 10. And now, our last stop. K2-18B."
+  },
+  {
+   "start": 116.74,
+   "end": 123.44,
+   "text": "Some scientists think it could be a giant ocean world. In 2025, a team reported a possible hint"
+  },
+  {
+   "start": 123.44,
+   "end": 130.26,
+   "text": "of a gas that, on Earth, is made by living things. Let's take a closer look. Luna, dive in."
+  },
+  {
+   "start": 130.9,
+   "end": 137.76,
+   "text": "Slowly. It's dark down here. Very quiet. Wait, did you see that? Something is moving."
+  },
+  {
+   "start": 138.46,
+   "end": 145.6,
+   "text": "Something big. Luna, don't move. It's looking at us. Run Luna! Back to the spaceship! Go, go, go!"
+  },
+  {
+   "start": 147.5,
+   "end": 154.12,
+   "text": "That was close. Okay, let's be honest. That creature was only our imagination."
+  },
+  {
+   "start": 155.0,
+   "end": 158.16,
+   "text": "Many scientists say the evidence for life there is still weak."
+  },
+  {
+   "start": 158.16,
+   "end": 165.22,
+   "text": "Nobody has found life on these planets. Not yet. But scientists are still looking. Think about it."
+  },
+  {
+   "start": 165.5,
+   "end": 171.22,
+   "text": "The most common planet out there is the one we don't even have. Which means our solar system"
+  },
+  {
+   "start": 171.22,
+   "end": 177.8,
+   "text": "might be the unusual one. And Earth might be rarer than we ever imagined. And here's the thing."
+  },
+  {
+   "start": 178.64,
+   "end": 185.2,
+   "text": "Billions of planets, and not one of them, can care. But you can. Don't ever forget how"
+  },
+  {
+   "start": 185.2,
+   "end": 191.34,
+   "text": "special that makes you. Space is truly amazing. And this is only the beginning."
+  }
+ ]
+}
