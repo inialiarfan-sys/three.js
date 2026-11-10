@@ -25,7 +25,7 @@ export const LAYOUTS: Record<Mode, Layout> = {
 	vertical: {
 		focus: { x: 0, y: 0.3 }, statY: 300, statSize: 120, titleY: 330, titleSize: 96,
 		capX: 470, capY: 1420, capW: 740, capSize: 62, capWords: 7,
-		lunaY: - 0.3, lunaXL: - 0.5, lunaXR: 0.38, lunaH: 0.34,
+		lunaY: - 0.3, lunaXL: - 0.5, lunaXR: 0.38, lunaH: 0.4,
 	},
 	wide: {
 		focus: { x: 0.1, y: 0.08 }, statY: 150, statSize: 104, titleY: 170, titleSize: 96,

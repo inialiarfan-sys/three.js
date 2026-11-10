@@ -6,7 +6,7 @@ import { PALETTE } from './engine/toon';
 import { bigX, pill, thought } from './engine/hud';
 import { burst, crowd, planet, poofs, puffs, solarSystem, star, V3 } from './props';
 import { float, hops, idle, leap, tremble, type Motion } from './motion';
-import { label, ship, stat, type SceneDef } from './scenes-a';
+import { buddy, label, ship, stat, type SceneDef } from './scenes-a';
 import type { Stage } from './stage';
 
 /** landing times of a hops() run (for smoke poofs) */
@@ -186,7 +186,8 @@ export const SCENES_B: SceneDef[] = [
 			const sl = c.slot( 'R' );
 			const sp = c.screen( c.V ? sl.x : 0.72, sl.y + ( c.V ? 0.16 : 0.45 ), c.camDist * 0.7 );
 			ship( c, sp.add( V3( 0, Math.sin( c.t * 1.4 ) * 0.05, 0 ) ), { scale: c.lunaHeight( c.camDist * 0.7 ) * ( c.V ? 0.42 : 0.34 ), rot: 0.2 + Math.sin( c.t ) * 0.05, flame: 0.35, face: c.t > tH ? 'surprised' : 'happy' } );
-			void t0;
+			buddy( c, 'L', [ [ t0, 'astronaut' ], [ tO, 'excited_pose' ], [ tH, 'surprised_pose' ], [ tCl, 'thinking' ] ],
+				[ [ tK + 0.2, tO - 0.1, 'happy' ], [ tO + 0.2, tH - 0.1, 'excited' ], [ tH + 0.2, tCl - 0.1, 'surprised' ] ], { enter: t0 + 0.2, space: true } );
 		},
 	},
 	// 15 ── underwater: "Luna, dive in… slowly. It's dark down here. Very quiet."
@@ -332,13 +333,14 @@ export const SCENES_B: SceneDef[] = [
 				c.frame( V3( 0, 0, 0 ), lerp( 8, 26, z ) );
 				crowd( c, V3( 0, 0, 2 ), 1.0, t0 - 3, 1, 0.7 );
 				c.hud.stat( c.t, tC, tU - 0.1, 'super-Earths everywhere', c.sx, c.L.statY, c.L.statSize * 0.5, PALETTE.mint );
+				buddy( c, 'L', [ [ t0, 'thinking' ], [ tC, 'surprised_pose' ] ], [ [ t0 + 0.3, tC - 0.1, 'thinking' ], [ tC + 0.2, tU - 0.1, 'surprised' ] ], { space: true } );
 				return;
 			}
 			const S = solarSystem( c, tU, false );
 			const earthP = S.earth;
 			( c.w.solar.userData.dashes as THREE.Group ).visible = remap( c.t, tR - 0.2, tR + 0.6 ) < 1;
 			const push = easeInOutCubic( remap( c.t, tR - 0.2, c.t1 - 0.3 ) );
-			c.frame( S.center.clone().lerp( earthP, push ), lerp( S.radius, 0.55, push ), { x: 0, y: lerp( c.V ? 0 : c.L.focus.y * 0.3, 0, push ) } );
+			c.frame( S.center.clone().lerp( earthP, push ), lerp( S.radius, c.V ? 0.95 : 0.6, push ), { x: 0, y: lerp( c.V ? 0 : c.L.focus.y * 0.3, 0, push ) } );
 			c.hud.stat( c.t, tU + 0.1, tR - 0.1, 'the unusual one?', c.sx, c.L.statY, c.L.statSize * 0.5, '#ffffff' );
 			// Earth glows warmly
 			const warm = smooth( remap( c.t, tR, tR + 1.2 ) );
@@ -346,6 +348,7 @@ export const SCENES_B: SceneDef[] = [
 			w.helmetGlow.scale.setScalar( S.earthR * 4.5 * warm * ( 1 + Math.sin( c.t * 2 ) * 0.04 ) );
 			( w.helmetGlow.material as THREE.MeshBasicMaterial ).color.set( '#ffcf9a' );
 			c.hud.stat( c.t, tR + 0.4, c.t1 - 0.1, 'rarer than we imagined', c.sx, c.L.statY, c.L.statSize * 0.46, PALETTE.peach );
+			buddy( c, c.V ? 'L' : 'L', [ [ tU, 'confused_pose' ], [ tR, 'love' ] ], [ [ tU + 0.2, tR - 0.1, 'confused' ] ], { enter: tU, space: true } );   // then she just hugs the heart
 		},
 	},
 	// 21 ── "And here's the thing… But you can." quiet night hill, Luna from behind

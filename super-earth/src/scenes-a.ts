@@ -5,7 +5,8 @@ import { clamp, easeInCubic, easeInOutCubic, easeOutCubic, lerp, popInOut, remap
 import { PALETTE } from './engine/toon';
 import { bigX, pill, routeMap, stamp, sweat } from './engine/hud';
 import { burst, cape, crowd, planet, puffs, solarSystem, V3 } from './props';
-import { hops, idle, leap, type Motion } from './motion';
+import { float, hops, idle, leap, type Motion } from './motion';
+import type { Expr } from './luna';
 import type { Stage } from './stage';
 
 export interface SceneDef { key: string; render: ( c: Stage ) => void }
@@ -20,6 +21,24 @@ export function label( c: Stage, p: THREE.Vector3, str: string, t0: number, t1: 
 	c.hud.text( str, q.x, q.y + dy, c.L.statSize * size, { scale: s, fill, rot: Math.sin( c.t * 2 ) * 0.03 } );
 }
 export const cycle = ( m: ( t: number ) => Motion ) => m;
+
+type Sprite = Parameters<Stage[ 'lunaAt' ]>[ 2 ][ 'sprite' ];
+/**
+ * Luna as the on-screen buddy in a slot: pose schedule [[t, sprite]], bubble list, and she pops
+ * in with a spring at `enter` (hopping in from off-screen). space=true floats instead of standing.
+ */
+export function buddy( c: Stage, side: 'L' | 'R', poses: [ number, Sprite ][], bubbles: [ number, number, Expr ][], o: { enter?: number; space?: boolean; face?: number } = {} ) {
+	const sl = c.slot( side );
+	const enter = o.enter ?? c.t0;
+	if ( c.t < enter ) return;
+	const p = c.sched( poses );
+	const hopIn = ( t: number ) => hops( t, enter, enter + 0.72, { hopDur: 0.36, height: 0.2, wobble: 8 } );
+	const inProg = hopIn( c.t ).p;
+	const from = side === 'L' ? - 1.35 : 1.35;
+	const x = c.t < enter + 0.72 ? lerp( from, sl.x, inProg ) : sl.x;
+	const motion = ( t: number ) => ( t < enter + 0.72 ? hopIn( t ) : o.space ? float( t, 0.5 ) : idle( t ) );
+	c.lunaAt( x, sl.y, { sprite: p.v, poseAt: p.at, face: o.face ?? ( side === 'L' ? 1 : - 1 ), shadow: o.space ? 0.35 : 1, bubble: c.bubbles( bubbles ) }, motion );
+}
 
 /** Ship helper: position/rotation + flame/door/face */
 export function ship( c: Stage, pos: THREE.Vector3, o: { rot?: number; scale?: number; flame?: number; door?: number; face?: Parameters<Stage[ 'w' ][ 'ship' ][ 'pose' ]>[ 1 ][ 'face' ]; wobble?: number } = {} ) {
@@ -40,6 +59,7 @@ export const SCENES_A: SceneDef[] = [
 			planet( c, c.w.P.rock, V3( 0, c.V ? - 0.4 : - 0.3, - 1 ), 0.9 * s, { spin: 0.2 } );
 			c.hud.text( 'THE PLANET', c.W / 2, c.L.titleY, c.L.titleSize, { scale: spring( c.t - 0.1 ), fill: '#ffffff', rot: - 0.04 } );
 			c.hud.text( 'WE ARE MISSING', c.W / 2, c.L.titleY + c.L.titleSize * 1.1, c.L.titleSize * 0.9, { scale: spring( c.t - 0.35 ), fill: PALETTE.peach, rot: 0.03 } );
+			buddy( c, 'R', [ [ 0, 'astronaut' ], [ 1.3, 'waving' ] ], [ [ 1.4, c.t1 + 0.3, 'happy' ] ], { enter: 0.45, space: true } );
 		},
 	},
 	// 1 ── "The most common planet in our galaxy… is one we don't have."
@@ -53,6 +73,7 @@ export const SCENES_A: SceneDef[] = [
 			crowd( c, V3( 0, 0, 4 ), 1.2, t0 + 0.2, 2.5 );
 			const s = popInOut( c.t, tQ + 0.15, c.t1 + 0.3 );
 			c.hud.text( '?', c.W / 2, c.H * ( c.V ? 0.36 : 0.42 ), c.L.statSize * 3.2, { scale: s, fill: PALETTE.yellow, rot: Math.sin( c.t * 3 ) * 0.08 } );
+			buddy( c, 'L', [ [ t0, 'astronaut' ], [ tQ + 0.2, 'confused_pose' ] ], [], { enter: t0 + 0.6, space: true } );   // the big "?" is the bubble here
 		},
 	},
 	// 2 ── "Not Mercury. Not Jupiter. Not Earth. Something in between."
@@ -76,6 +97,8 @@ export const SCENES_A: SceneDef[] = [
 				const xw = wordAfter( key === 'mercury' ? 'notMercury' : key === 'jupiter' ? 'notJupiter' : 'notEarth', key );
 				bigX( c.hud, p.x, p.y, c.W * ( c.V ? 0.26 : 0.14 ), spring( c.t - xw - 0.15, 2.5, 7 ) );
 			}
+			buddy( c, 'L', [ [ tM, 'nervous' ], [ tJ, 'crossed_arms' ], [ tE, 'grumpy' ], [ tB, 'thinking' ] ],
+				[], { enter: tM - 0.4, space: true } );   // poses only: a bubble would sit on the planet
 		},
 	},
 	// 3 ── "Scientists call it a super-Earth. No, it doesn't wear a cape."
@@ -96,6 +119,8 @@ export const SCENES_A: SceneDef[] = [
 			burst( c, 1, V3( 0.9, 0.7, 0.8 ), 1.6, tCape, tCape + 0.6 );
 			const p = c.px( P.clone().add( V3( 0, - 0.2, 1 ) ) );
 			bigX( c.hud, p.x, p.y, c.W * ( c.V ? 0.17 : 0.09 ), popInOut( c.t, tCape + 0.05, tEnd + 1.1 ) );
+			buddy( c, 'L', [ [ t0, 'excited_pose' ], [ tNo, 'surprised_pose' ], [ tCape + 0.05, 'cheering' ], [ tEnd + 0.6, 'pointing' ] ],
+				[], { space: true } );
 		},
 	},
 	// 4 ── "So today, we're going to find one. Luna, grab your helmet. Let's go on an adventure!"
@@ -161,7 +186,7 @@ export const SCENES_A: SceneDef[] = [
 			// Luna's face in the ship window, floating in her slot
 			const sl = c.slot( 'R' );
 			const sp = c.screen( c.V ? sl.x : 0.74, sl.y + ( c.V ? 0.16 : 0.45 ), c.camDist * 0.7 );
-			ship( c, sp.add( V3( 0, Math.sin( c.t * 1.4 ) * 0.05, 0 ) ), { scale: c.lunaHeight( c.camDist * 0.7 ) * ( c.V ? 0.42 : 0.34 ), rot: - 0.25 + Math.sin( c.t ) * 0.05, flame: 0.35, face: 'thinking' } );
+			ship( c, sp.add( V3( 0, Math.sin( c.t * 1.4 ) * 0.05, 0 ) ), { scale: c.lunaHeight( c.camDist * 0.7 ) * ( c.V ? 0.5 : 0.38 ), rot: - 0.25 + Math.sin( c.t ) * 0.05, flame: 0.35, face: c.sched<Expr>( [ [ t0, 'thinking' ], [ tB, 'happy' ], [ tR, 'excited' ], [ tO, 'surprised' ] ] ).v } );
 		},
 	},
 	// 6 ── "Here's the strange part … kept finding super-Earths. Again and again … none"
@@ -182,6 +207,8 @@ export const SCENES_A: SceneDef[] = [
 				c.hud.stat( c.t, tM + 0.1, tN - 0.1, 'most common planet!', c.sx, c.L.statY + c.L.statSize * 0.7, c.L.statSize * 0.42, '#ffffff' );
 				c.hud.text( 'AGAIN!', c.W * 0.5, c.H * 0.36, c.L.statSize * 0.55, { scale: popInOut( c.t, g1, g2 - 0.05 ), fill: PALETTE.yellow, rot: - 0.1 } );
 				c.hud.text( 'AND AGAIN!', c.W * 0.5, c.H * 0.36, c.L.statSize * 0.55, { scale: popInOut( c.t, g2, g2 + 0.9 ), fill: PALETTE.pink, rot: 0.1 } );
+				buddy( c, 'L', [ [ t0, 'thinking' ], [ tK, 'surprised_pose' ], [ g1, 'excited_pose' ], [ tM, 'cheering' ] ],
+					[ [ t0 + 0.3, tK - 0.1, 'thinking' ], [ tK + 0.2, g1 - 0.1, 'surprised' ], [ g1 + 0.1, tN - 0.15, 'excited' ] ], { space: true } );
 			} else {
 				// our solar system: small ... (gap) ... giant
 				const S = solarSystem( c, tN );
@@ -190,6 +217,7 @@ export const SCENES_A: SceneDef[] = [
 				c.hud.text( '?', gp.x, gp.y, c.L.statSize * ( c.V ? 0.9 : 0.6 ), { scale: spring( c.t - tN - 0.6 ), fill: PALETTE.yellow } );
 				pill( c.hud, 'none here!', gp.x, gp.y + c.L.statSize * ( c.V ? 1.25 : 1.0 ), c.L.statSize * 0.32, spring( c.t - tN - 0.8 ), '#ffffff', '#ff6b81' );
 				c.hud.stat( c.t, tN + 0.1, c.t1 - 0.1, 'our solar system', c.sx, c.L.statY, c.L.statSize * 0.5, '#ffffff' );
+				buddy( c, c.V ? 'R' : 'L', [ [ tN, 'confused_pose' ] ], [ [ tN + 0.4, c.t1 + 0.3, 'confused' ] ], { space: true } );
 			}
 		},
 	},
@@ -199,7 +227,7 @@ export const SCENES_A: SceneDef[] = [
 			const t0 = c.t0, tG = at( 'giant' ), tNo = at( 'noMedium' ), tF = at( 'fries' ), tR = at( 'ranOut' );
 			const tMed = wordAfter( 'noMedium', 'medium' ), tMed2 = wordAfter( 'ranOut', 'medium' );
 			const w = c.w;
-			const bx = c.V ? 0.05 : - 0.2, by = c.V ? 0.62 : 0.05, bs = c.V ? 2.35 : 2.3;
+			const bx = c.V ? 0.16 : - 0.2, by = c.V ? 0.66 : 0.05, bs = c.V ? 2.05 : 2.3;
 			c.punch( V3( c.V ? 0 : 0.6, c.V ? 0.35 : 0, 0 ), c.V ? 1.75 : 1.9, tMed );
 			w.menu.visible = true;
 			const ms = spring( c.t - t0, 1.8, 6 );
@@ -224,7 +252,7 @@ export const SCENES_A: SceneDef[] = [
 			w.fries.rotation.set( 0.25, c.t * 0.6, c.t > tMed2 ? 0.25 + Math.sin( ( c.t - tMed2 ) * 6 ) * 0.08 * Math.exp( - ( c.t - tMed2 ) * 2 ) : 0 );
 			w.fries.children.forEach( ( f, i ) => { if ( i > 0 ) f.visible = c.t < tMed2; } );
 			const sl = c.slot( 'L' );
-			c.lunaAt( c.V ? sl.x : sl.x, sl.y, { sprite: c.t > tMed ? 'sad_pose' : 'astronaut', poseAt: tMed, face: 1, bubble: c.bubbles( [ [ tMed + 0.15, c.t1 - 0.1, 'sad' ] ] ) } );
+			c.lunaAt( c.V ? sl.x - 0.08 : sl.x, c.V ? sl.y - 0.04 : sl.y, { sprite: c.t > tMed ? 'sad_pose' : 'astronaut', poseAt: tMed, face: 1, bubble: c.V ? null : c.bubbles( [ [ tMed + 0.15, c.t1 - 0.1, 'sad' ] ] ) } );   // vertical: her crying pose says it; a bubble would cover the board
 		},
 	},
 	// 8 ── landing: "Okay Luna, let's land on one. Careful… the gravity here is strong! … twice as heavy"
@@ -330,10 +358,11 @@ export const SCENES_A: SceneDef[] = [
 				// route map
 				c.frame( V3( 0, 0, 0 ), 3 );
 				const P = c.V
-					? [ { x: 0.2, y: 0.62 }, { x: 0.3, y: 0.42 }, { x: 0.72, y: 0.3 }, { x: 0.38, y: 0.16 } ]
+					? [ { x: 0.14, y: 0.5 }, { x: 0.3, y: 0.4 }, { x: 0.72, y: 0.3 }, { x: 0.38, y: 0.16 } ]
 					: [ { x: 0.12, y: 0.62 }, { x: 0.36, y: 0.38 }, { x: 0.6, y: 0.56 }, { x: 0.84, y: 0.32 } ];
 				const names = [ '', '55 Cancri e', 'LHS 1140 b', 'K2-18 b' ], cols = [ '', '#ff9a5a', '#c8f4ff', '#6f95ff' ];
 				const prog = easeInOutCubic( remap( c.t, tGo + 0.4, c.t1 - 0.3 ) );
+				buddy( c, 'R', [ [ tGo + 0.4, 'cheering' ] ], [ [ tGo + 0.6, c.t1 + 0.3, 'excited' ] ], { enter: tGo + 0.4, space: true } );
 				drawRoute( c, P.map( ( p, i ) => ( { x: p.x * c.W, y: p.y * c.H, label: names[ i ], color: cols[ i ] } ) ), prog );
 				// tiny ship rides the route
 				const seg = Math.min( 2, Math.floor( prog * 3 ) ), f = prog * 3 - seg;
