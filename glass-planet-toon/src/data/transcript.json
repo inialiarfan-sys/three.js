@@ -1,0 +1,2301 @@
+{
+ "words": [
+  {
+   "word": "the",
+   "start": 0.0,
+   "end": 0.24
+  },
+  {
+   "word": "worst",
+   "start": 0.24,
+   "end": 0.72
+  },
+  {
+   "word": "planet",
+   "start": 0.72,
+   "end": 1.32
+  },
+  {
+   "word": "ever",
+   "start": 1.32,
+   "end": 1.9
+  },
+  {
+   "word": "discovered.",
+   "start": 1.9,
+   "end": 2.7
+  },
+  {
+   "word": "Glass",
+   "start": 3.6,
+   "end": 3.94
+  },
+  {
+   "word": "rain,",
+   "start": 3.94,
+   "end": 4.4
+  },
+  {
+   "word": "winds",
+   "start": 6.12,
+   "end": 6.12
+  },
+  {
+   "word": "faster",
+   "start": 6.12,
+   "end": 6.64
+  },
+  {
+   "word": "than",
+   "start": 6.64,
+   "end": 7.04
+  },
+  {
+   "word": "sound,",
+   "start": 7.04,
+   "end": 7.6
+  },
+  {
+   "word": "1000",
+   "start": 8.18,
+   "end": 8.84
+  },
+  {
+   "word": "degrees,",
+   "start": 8.84,
+   "end": 9.56
+  },
+  {
+   "word": "and",
+   "start": 10.34,
+   "end": 10.68
+  },
+  {
+   "word": "it",
+   "start": 10.68,
+   "end": 11.1
+  },
+  {
+   "word": "smells",
+   "start": 11.1,
+   "end": 11.46
+  },
+  {
+   "word": "like",
+   "start": 11.46,
+   "end": 11.76
+  },
+  {
+   "word": "rotten",
+   "start": 11.76,
+   "end": 12.18
+  },
+  {
+   "word": "eggs.",
+   "start": 12.18,
+   "end": 12.78
+  },
+  {
+   "word": "Welcome",
+   "start": 13.72,
+   "end": 14.1
+  },
+  {
+   "word": "to",
+   "start": 14.1,
+   "end": 14.46
+  },
+  {
+   "word": "the",
+   "start": 14.46,
+   "end": 14.62
+  },
+  {
+   "word": "worst",
+   "start": 14.62,
+   "end": 15.0
+  },
+  {
+   "word": "planet",
+   "start": 15.0,
+   "end": 15.5
+  },
+  {
+   "word": "ever",
+   "start": 15.5,
+   "end": 15.96
+  },
+  {
+   "word": "discovered.",
+   "start": 15.96,
+   "end": 16.58
+  },
+  {
+   "word": "Its",
+   "start": 17.08,
+   "end": 17.32
+  },
+  {
+   "word": "name",
+   "start": 17.32,
+   "end": 17.6
+  },
+  {
+   "word": "is",
+   "start": 17.6,
+   "end": 17.92
+  },
+  {
+   "word": "HD",
+   "start": 17.92,
+   "end": 18.56
+  },
+  {
+   "word": "189733",
+   "start": 18.56,
+   "end": 20.2
+  },
+  {
+   "word": "b,",
+   "start": 20.2,
+   "end": 20.5
+  },
+  {
+   "word": "and",
+   "start": 20.9,
+   "end": 21.32
+  },
+  {
+   "word": "it",
+   "start": 21.32,
+   "end": 21.64
+  },
+  {
+   "word": "is",
+   "start": 21.64,
+   "end": 21.82
+  },
+  {
+   "word": "not",
+   "start": 21.82,
+   "end": 22.22
+  },
+  {
+   "word": "in",
+   "start": 22.22,
+   "end": 22.5
+  },
+  {
+   "word": "our",
+   "start": 22.5,
+   "end": 22.7
+  },
+  {
+   "word": "solar",
+   "start": 22.7,
+   "end": 22.88
+  },
+  {
+   "word": "system.",
+   "start": 22.88,
+   "end": 23.42
+  },
+  {
+   "word": "Our",
+   "start": 24.08,
+   "end": 24.28
+  },
+  {
+   "word": "sun",
+   "start": 24.28,
+   "end": 24.52
+  },
+  {
+   "word": "is",
+   "start": 24.52,
+   "end": 24.8
+  },
+  {
+   "word": "just",
+   "start": 24.8,
+   "end": 25.0
+  },
+  {
+   "word": "one",
+   "start": 25.0,
+   "end": 25.3
+  },
+  {
+   "word": "of",
+   "start": 25.3,
+   "end": 25.44
+  },
+  {
+   "word": "billions",
+   "start": 25.44,
+   "end": 25.9
+  },
+  {
+   "word": "of",
+   "start": 25.9,
+   "end": 26.24
+  },
+  {
+   "word": "stars",
+   "start": 26.24,
+   "end": 26.5
+  },
+  {
+   "word": "in",
+   "start": 26.5,
+   "end": 26.7
+  },
+  {
+   "word": "our",
+   "start": 26.7,
+   "end": 26.86
+  },
+  {
+   "word": "galaxy.",
+   "start": 26.86,
+   "end": 27.3
+  },
+  {
+   "word": "Many",
+   "start": 27.86,
+   "end": 28.14
+  },
+  {
+   "word": "of",
+   "start": 28.14,
+   "end": 28.36
+  },
+  {
+   "word": "those",
+   "start": 28.36,
+   "end": 28.56
+  },
+  {
+   "word": "stars",
+   "start": 28.56,
+   "end": 28.84
+  },
+  {
+   "word": "have",
+   "start": 28.84,
+   "end": 29.16
+  },
+  {
+   "word": "planets",
+   "start": 29.16,
+   "end": 29.54
+  },
+  {
+   "word": "of",
+   "start": 29.54,
+   "end": 29.7
+  },
+  {
+   "word": "their",
+   "start": 29.7,
+   "end": 29.82
+  },
+  {
+   "word": "own.",
+   "start": 29.82,
+   "end": 30.14
+  },
+  {
+   "word": "Scientists",
+   "start": 31.0,
+   "end": 31.0
+  },
+  {
+   "word": "call",
+   "start": 31.0,
+   "end": 31.32
+  },
+  {
+   "word": "them",
+   "start": 31.32,
+   "end": 31.56
+  },
+  {
+   "word": "exoplanets.",
+   "start": 31.56,
+   "end": 32.5
+  },
+  {
+   "word": "So",
+   "start": 33.02,
+   "end": 33.14
+  },
+  {
+   "word": "far,",
+   "start": 33.14,
+   "end": 33.42
+  },
+  {
+   "word": "they",
+   "start": 33.66,
+   "end": 33.72
+  },
+  {
+   "word": "have",
+   "start": 33.72,
+   "end": 33.86
+  },
+  {
+   "word": "found",
+   "start": 33.86,
+   "end": 34.12
+  },
+  {
+   "word": "more",
+   "start": 34.12,
+   "end": 34.32
+  },
+  {
+   "word": "than",
+   "start": 34.32,
+   "end": 34.56
+  },
+  {
+   "word": "6",
+   "start": 34.56,
+   "end": 35.0
+  },
+  {
+   "word": ",000.",
+   "start": 35.0,
+   "end": 35.66
+  },
+  {
+   "word": "But",
+   "start": 36.12,
+   "end": 36.3
+  },
+  {
+   "word": "few",
+   "start": 36.3,
+   "end": 36.7
+  },
+  {
+   "word": "are",
+   "start": 36.7,
+   "end": 37.12
+  },
+  {
+   "word": "as",
+   "start": 37.12,
+   "end": 37.32
+  },
+  {
+   "word": "terrifying",
+   "start": 37.32,
+   "end": 37.96
+  },
+  {
+   "word": "as",
+   "start": 37.96,
+   "end": 38.24
+  },
+  {
+   "word": "this",
+   "start": 38.24,
+   "end": 38.46
+  },
+  {
+   "word": "one.",
+   "start": 38.46,
+   "end": 38.74
+  },
+  {
+   "word": "This",
+   "start": 39.36,
+   "end": 39.52
+  },
+  {
+   "word": "planet",
+   "start": 39.52,
+   "end": 39.86
+  },
+  {
+   "word": "is",
+   "start": 39.86,
+   "end": 40.12
+  },
+  {
+   "word": "about",
+   "start": 40.12,
+   "end": 40.36
+  },
+  {
+   "word": "64",
+   "start": 40.36,
+   "end": 41.02
+  },
+  {
+   "word": "light",
+   "start": 41.02,
+   "end": 41.36
+  },
+  {
+   "word": "years",
+   "start": 41.36,
+   "end": 41.54
+  },
+  {
+   "word": "away.",
+   "start": 41.54,
+   "end": 41.94
+  },
+  {
+   "word": "So",
+   "start": 42.34,
+   "end": 42.6
+  },
+  {
+   "word": "how",
+   "start": 42.6,
+   "end": 43.0
+  },
+  {
+   "word": "do",
+   "start": 43.0,
+   "end": 43.1
+  },
+  {
+   "word": "we",
+   "start": 43.1,
+   "end": 43.2
+  },
+  {
+   "word": "know",
+   "start": 43.2,
+   "end": 43.36
+  },
+  {
+   "word": "anything",
+   "start": 43.36,
+   "end": 43.74
+  },
+  {
+   "word": "about",
+   "start": 43.74,
+   "end": 44.1
+  },
+  {
+   "word": "it?",
+   "start": 44.1,
+   "end": 44.36
+  },
+  {
+   "word": "When",
+   "start": 44.82,
+   "end": 44.96
+  },
+  {
+   "word": "the",
+   "start": 44.96,
+   "end": 45.1
+  },
+  {
+   "word": "planet",
+   "start": 45.1,
+   "end": 45.36
+  },
+  {
+   "word": "passes",
+   "start": 45.36,
+   "end": 45.78
+  },
+  {
+   "word": "in",
+   "start": 45.78,
+   "end": 46.02
+  },
+  {
+   "word": "front",
+   "start": 46.02,
+   "end": 46.16
+  },
+  {
+   "word": "of",
+   "start": 46.16,
+   "end": 46.28
+  },
+  {
+   "word": "its",
+   "start": 46.28,
+   "end": 46.44
+  },
+  {
+   "word": "star,",
+   "start": 46.44,
+   "end": 46.86
+  },
+  {
+   "word": "star",
+   "start": 47.5,
+   "end": 47.5
+  },
+  {
+   "word": "light",
+   "start": 47.5,
+   "end": 47.72
+  },
+  {
+   "word": "shines",
+   "start": 47.72,
+   "end": 48.14
+  },
+  {
+   "word": "through",
+   "start": 48.14,
+   "end": 48.4
+  },
+  {
+   "word": "its",
+   "start": 48.4,
+   "end": 48.58
+  },
+  {
+   "word": "air.",
+   "start": 48.58,
+   "end": 48.88
+  },
+  {
+   "word": "By",
+   "start": 49.32,
+   "end": 49.46
+  },
+  {
+   "word": "studying",
+   "start": 49.46,
+   "end": 49.9
+  },
+  {
+   "word": "that",
+   "start": 49.9,
+   "end": 50.18
+  },
+  {
+   "word": "light,",
+   "start": 50.18,
+   "end": 50.52
+  },
+  {
+   "word": "scientists",
+   "start": 51.14,
+   "end": 51.14
+  },
+  {
+   "word": "can",
+   "start": 51.14,
+   "end": 51.42
+  },
+  {
+   "word": "tell",
+   "start": 51.42,
+   "end": 51.64
+  },
+  {
+   "word": "what",
+   "start": 51.64,
+   "end": 51.84
+  },
+  {
+   "word": "the",
+   "start": 51.84,
+   "end": 51.96
+  },
+  {
+   "word": "planet",
+   "start": 51.96,
+   "end": 52.22
+  },
+  {
+   "word": "is",
+   "start": 52.22,
+   "end": 52.42
+  },
+  {
+   "word": "made",
+   "start": 52.42,
+   "end": 52.62
+  },
+  {
+   "word": "of.",
+   "start": 52.62,
+   "end": 53.0
+  },
+  {
+   "word": "And",
+   "start": 53.24,
+   "end": 53.48
+  },
+  {
+   "word": "what",
+   "start": 53.48,
+   "end": 53.68
+  },
+  {
+   "word": "they",
+   "start": 53.68,
+   "end": 53.86
+  },
+  {
+   "word": "found",
+   "start": 53.86,
+   "end": 54.36
+  },
+  {
+   "word": "was",
+   "start": 54.36,
+   "end": 54.74
+  },
+  {
+   "word": "shocking.",
+   "start": 54.74,
+   "end": 55.28
+  },
+  {
+   "word": "From",
+   "start": 55.92,
+   "end": 56.22
+  },
+  {
+   "word": "far",
+   "start": 56.22,
+   "end": 56.54
+  },
+  {
+   "word": "away,",
+   "start": 56.54,
+   "end": 56.92
+  },
+  {
+   "word": "the",
+   "start": 57.2,
+   "end": 57.26
+  },
+  {
+   "word": "planet",
+   "start": 57.26,
+   "end": 57.52
+  },
+  {
+   "word": "looks",
+   "start": 57.52,
+   "end": 57.82
+  },
+  {
+   "word": "deep",
+   "start": 57.82,
+   "end": 58.2
+  },
+  {
+   "word": "blue,",
+   "start": 58.2,
+   "end": 58.56
+  },
+  {
+   "word": "just",
+   "start": 58.94,
+   "end": 59.12
+  },
+  {
+   "word": "like",
+   "start": 59.12,
+   "end": 59.32
+  },
+  {
+   "word": "Earth.",
+   "start": 59.32,
+   "end": 59.58
+  },
+  {
+   "word": "But",
+   "start": 60.16,
+   "end": 60.34
+  },
+  {
+   "word": "it",
+   "start": 60.34,
+   "end": 60.64
+  },
+  {
+   "word": "has",
+   "start": 60.64,
+   "end": 60.86
+  },
+  {
+   "word": "no",
+   "start": 60.86,
+   "end": 61.24
+  },
+  {
+   "word": "oceans.",
+   "start": 61.24,
+   "end": 61.8
+  },
+  {
+   "word": "Scientists",
+   "start": 62.64,
+   "end": 62.94
+  },
+  {
+   "word": "think",
+   "start": 62.94,
+   "end": 63.22
+  },
+  {
+   "word": "the",
+   "start": 63.22,
+   "end": 63.42
+  },
+  {
+   "word": "blue",
+   "start": 63.42,
+   "end": 63.7
+  },
+  {
+   "word": "color",
+   "start": 63.7,
+   "end": 64.0
+  },
+  {
+   "word": "may",
+   "start": 64.0,
+   "end": 64.28
+  },
+  {
+   "word": "come",
+   "start": 64.28,
+   "end": 64.52
+  },
+  {
+   "word": "from",
+   "start": 64.52,
+   "end": 64.74
+  },
+  {
+   "word": "tiny",
+   "start": 64.74,
+   "end": 65.12
+  },
+  {
+   "word": "bits",
+   "start": 65.12,
+   "end": 65.42
+  },
+  {
+   "word": "of",
+   "start": 65.42,
+   "end": 65.6
+  },
+  {
+   "word": "glass",
+   "start": 65.6,
+   "end": 65.92
+  },
+  {
+   "word": "floating",
+   "start": 65.92,
+   "end": 66.32
+  },
+  {
+   "word": "in",
+   "start": 66.32,
+   "end": 66.52
+  },
+  {
+   "word": "its",
+   "start": 66.52,
+   "end": 66.68
+  },
+  {
+   "word": "clouds.",
+   "start": 66.68,
+   "end": 67.02
+  },
+  {
+   "word": "Glass",
+   "start": 67.76,
+   "end": 67.96
+  },
+  {
+   "word": "is",
+   "start": 67.96,
+   "end": 68.26
+  },
+  {
+   "word": "made",
+   "start": 68.26,
+   "end": 68.44
+  },
+  {
+   "word": "from",
+   "start": 68.44,
+   "end": 68.66
+  },
+  {
+   "word": "silica,",
+   "start": 68.66,
+   "end": 69.1
+  },
+  {
+   "word": "the",
+   "start": 69.4,
+   "end": 69.5
+  },
+  {
+   "word": "same",
+   "start": 69.5,
+   "end": 69.72
+  },
+  {
+   "word": "material",
+   "start": 69.72,
+   "end": 70.08
+  },
+  {
+   "word": "found",
+   "start": 70.08,
+   "end": 70.44
+  },
+  {
+   "word": "in",
+   "start": 70.44,
+   "end": 70.68
+  },
+  {
+   "word": "sand.",
+   "start": 70.68,
+   "end": 71.02
+  },
+  {
+   "word": "This",
+   "start": 71.64,
+   "end": 71.84
+  },
+  {
+   "word": "planet",
+   "start": 71.84,
+   "end": 72.2
+  },
+  {
+   "word": "is",
+   "start": 72.2,
+   "end": 72.58
+  },
+  {
+   "word": "a",
+   "start": 72.58,
+   "end": 72.92
+  },
+  {
+   "word": "giant,",
+   "start": 72.92,
+   "end": 73.24
+  },
+  {
+   "word": "bigger",
+   "start": 73.66,
+   "end": 73.86
+  },
+  {
+   "word": "than",
+   "start": 73.86,
+   "end": 74.16
+  },
+  {
+   "word": "Jupiter,",
+   "start": 74.16,
+   "end": 74.58
+  },
+  {
+   "word": "and",
+   "start": 74.96,
+   "end": 75.22
+  },
+  {
+   "word": "it",
+   "start": 75.22,
+   "end": 75.36
+  },
+  {
+   "word": "sits",
+   "start": 75.36,
+   "end": 75.62
+  },
+  {
+   "word": "extremely",
+   "start": 75.62,
+   "end": 76.28
+  },
+  {
+   "word": "close",
+   "start": 76.28,
+   "end": 76.72
+  },
+  {
+   "word": "to",
+   "start": 76.72,
+   "end": 76.94
+  },
+  {
+   "word": "its",
+   "start": 76.94,
+   "end": 77.08
+  },
+  {
+   "word": "star.",
+   "start": 77.08,
+   "end": 77.42
+  },
+  {
+   "word": "One",
+   "start": 77.94,
+   "end": 78.18
+  },
+  {
+   "word": "year",
+   "start": 78.18,
+   "end": 78.42
+  },
+  {
+   "word": "there",
+   "start": 78.42,
+   "end": 78.72
+  },
+  {
+   "word": "lasts",
+   "start": 78.72,
+   "end": 79.12
+  },
+  {
+   "word": "only",
+   "start": 79.12,
+   "end": 79.56
+  },
+  {
+   "word": "about",
+   "start": 79.56,
+   "end": 79.84
+  },
+  {
+   "word": "two",
+   "start": 79.84,
+   "end": 80.22
+  },
+  {
+   "word": "Earth",
+   "start": 80.22,
+   "end": 80.52
+  },
+  {
+   "word": "days.",
+   "start": 80.52,
+   "end": 80.84
+  },
+  {
+   "word": "The",
+   "start": 80.84,
+   "end": 81.54
+  },
+  {
+   "word": "temperature",
+   "start": 81.54,
+   "end": 81.92
+  },
+  {
+   "word": "can",
+   "start": 81.92,
+   "end": 82.24
+  },
+  {
+   "word": "reach",
+   "start": 82.24,
+   "end": 82.5
+  },
+  {
+   "word": "around",
+   "start": 82.5,
+   "end": 82.82
+  },
+  {
+   "word": "1",
+   "start": 82.82,
+   "end": 83.34
+  },
+  {
+   "word": ",000",
+   "start": 83.34,
+   "end": 83.88
+  },
+  {
+   "word": "degrees",
+   "start": 83.88,
+   "end": 84.18
+  },
+  {
+   "word": "Celsius,",
+   "start": 84.18,
+   "end": 84.74
+  },
+  {
+   "word": "hot",
+   "start": 85.24,
+   "end": 85.44
+  },
+  {
+   "word": "enough",
+   "start": 85.44,
+   "end": 85.66
+  },
+  {
+   "word": "to",
+   "start": 85.66,
+   "end": 85.86
+  },
+  {
+   "word": "melt",
+   "start": 85.86,
+   "end": 86.08
+  },
+  {
+   "word": "many",
+   "start": 86.08,
+   "end": 86.46
+  },
+  {
+   "word": "metals.",
+   "start": 86.46,
+   "end": 86.84
+  },
+  {
+   "word": "One",
+   "start": 87.56,
+   "end": 87.7
+  },
+  {
+   "word": "side",
+   "start": 87.7,
+   "end": 88.02
+  },
+  {
+   "word": "always",
+   "start": 88.02,
+   "end": 88.54
+  },
+  {
+   "word": "faces",
+   "start": 88.54,
+   "end": 88.94
+  },
+  {
+   "word": "its",
+   "start": 88.94,
+   "end": 89.14
+  },
+  {
+   "word": "star,",
+   "start": 89.14,
+   "end": 89.48
+  },
+  {
+   "word": "so",
+   "start": 89.7,
+   "end": 89.96
+  },
+  {
+   "word": "it",
+   "start": 89.96,
+   "end": 90.18
+  },
+  {
+   "word": "is",
+   "start": 90.18,
+   "end": 90.34
+  },
+  {
+   "word": "always",
+   "start": 90.34,
+   "end": 90.72
+  },
+  {
+   "word": "day.",
+   "start": 90.72,
+   "end": 91.04
+  },
+  {
+   "word": "The",
+   "start": 91.54,
+   "end": 91.66
+  },
+  {
+   "word": "other",
+   "start": 91.66,
+   "end": 91.94
+  },
+  {
+   "word": "side",
+   "start": 91.94,
+   "end": 92.3
+  },
+  {
+   "word": "is",
+   "start": 92.3,
+   "end": 92.56
+  },
+  {
+   "word": "always",
+   "start": 92.56,
+   "end": 92.98
+  },
+  {
+   "word": "night.",
+   "start": 92.98,
+   "end": 93.3
+  },
+  {
+   "word": "That",
+   "start": 93.88,
+   "end": 94.06
+  },
+  {
+   "word": "huge",
+   "start": 94.06,
+   "end": 94.5
+  },
+  {
+   "word": "difference",
+   "start": 94.5,
+   "end": 94.92
+  },
+  {
+   "word": "in",
+   "start": 94.92,
+   "end": 95.18
+  },
+  {
+   "word": "heat",
+   "start": 95.18,
+   "end": 95.44
+  },
+  {
+   "word": "creates",
+   "start": 95.44,
+   "end": 95.92
+  },
+  {
+   "word": "monstrous",
+   "start": 95.92,
+   "end": 96.64
+  },
+  {
+   "word": "winds,",
+   "start": 96.64,
+   "end": 97.12
+  },
+  {
+   "word": "thousands",
+   "start": 97.66,
+   "end": 97.94
+  },
+  {
+   "word": "of",
+   "start": 97.94,
+   "end": 98.22
+  },
+  {
+   "word": "kilometers",
+   "start": 98.22,
+   "end": 98.58
+  },
+  {
+   "word": "per",
+   "start": 98.58,
+   "end": 98.96
+  },
+  {
+   "word": "hour,",
+   "start": 98.96,
+   "end": 99.28
+  },
+  {
+   "word": "faster",
+   "start": 99.72,
+   "end": 99.88
+  },
+  {
+   "word": "than",
+   "start": 99.88,
+   "end": 100.2
+  },
+  {
+   "word": "the",
+   "start": 100.2,
+   "end": 100.3
+  },
+  {
+   "word": "speed",
+   "start": 100.3,
+   "end": 100.54
+  },
+  {
+   "word": "of",
+   "start": 100.54,
+   "end": 100.74
+  },
+  {
+   "word": "sound.",
+   "start": 100.74,
+   "end": 101.14
+  },
+  {
+   "word": "Now",
+   "start": 101.66,
+   "end": 101.94
+  },
+  {
+   "word": "put",
+   "start": 101.94,
+   "end": 102.26
+  },
+  {
+   "word": "it",
+   "start": 102.26,
+   "end": 102.38
+  },
+  {
+   "word": "all",
+   "start": 102.38,
+   "end": 102.52
+  },
+  {
+   "word": "together.",
+   "start": 102.52,
+   "end": 102.9
+  },
+  {
+   "word": "Glass",
+   "start": 103.52,
+   "end": 103.68
+  },
+  {
+   "word": "in",
+   "start": 103.68,
+   "end": 103.92
+  },
+  {
+   "word": "the",
+   "start": 103.92,
+   "end": 104.04
+  },
+  {
+   "word": "clouds,",
+   "start": 104.04,
+   "end": 104.42
+  },
+  {
+   "word": "winds",
+   "start": 104.92,
+   "end": 105.12
+  },
+  {
+   "word": "faster",
+   "start": 105.12,
+   "end": 105.58
+  },
+  {
+   "word": "than",
+   "start": 105.58,
+   "end": 105.98
+  },
+  {
+   "word": "sound.",
+   "start": 105.98,
+   "end": 106.4
+  },
+  {
+   "word": "Scientists",
+   "start": 106.98,
+   "end": 107.22
+  },
+  {
+   "word": "think",
+   "start": 107.22,
+   "end": 107.6
+  },
+  {
+   "word": "this",
+   "start": 107.6,
+   "end": 107.88
+  },
+  {
+   "word": "could",
+   "start": 107.88,
+   "end": 108.04
+  },
+  {
+   "word": "create",
+   "start": 108.04,
+   "end": 108.44
+  },
+  {
+   "word": "rain",
+   "start": 108.44,
+   "end": 108.92
+  },
+  {
+   "word": "made",
+   "start": 108.92,
+   "end": 109.2
+  },
+  {
+   "word": "of",
+   "start": 109.2,
+   "end": 109.38
+  },
+  {
+   "word": "glass,",
+   "start": 109.38,
+   "end": 109.86
+  },
+  {
+   "word": "flying",
+   "start": 110.62,
+   "end": 110.62
+  },
+  {
+   "word": "sideways.",
+   "start": 110.62,
+   "end": 111.22
+  },
+  {
+   "word": "Standing",
+   "start": 111.92,
+   "end": 112.1
+  },
+  {
+   "word": "there",
+   "start": 112.1,
+   "end": 112.38
+  },
+  {
+   "word": "would",
+   "start": 112.38,
+   "end": 112.52
+  },
+  {
+   "word": "be",
+   "start": 112.52,
+   "end": 112.68
+  },
+  {
+   "word": "like",
+   "start": 112.68,
+   "end": 112.84
+  },
+  {
+   "word": "being",
+   "start": 112.84,
+   "end": 113.06
+  },
+  {
+   "word": "hit",
+   "start": 113.06,
+   "end": 113.32
+  },
+  {
+   "word": "by",
+   "start": 113.32,
+   "end": 113.54
+  },
+  {
+   "word": "millions",
+   "start": 113.54,
+   "end": 113.92
+  },
+  {
+   "word": "of",
+   "start": 113.92,
+   "end": 114.32
+  },
+  {
+   "word": "tiny",
+   "start": 114.32,
+   "end": 114.64
+  },
+  {
+   "word": "blades.",
+   "start": 114.64,
+   "end": 115.1
+  },
+  {
+   "word": "And",
+   "start": 115.64,
+   "end": 115.86
+  },
+  {
+   "word": "the",
+   "start": 115.86,
+   "end": 116.06
+  },
+  {
+   "word": "rotten",
+   "start": 116.06,
+   "end": 116.36
+  },
+  {
+   "word": "egg",
+   "start": 116.36,
+   "end": 116.62
+  },
+  {
+   "word": "smell?",
+   "start": 116.62,
+   "end": 116.92
+  },
+  {
+   "word": "In",
+   "start": 117.48,
+   "end": 117.62
+  },
+  {
+   "word": "2024,",
+   "start": 117.62,
+   "end": 118.28
+  },
+  {
+   "word": "the",
+   "start": 118.72,
+   "end": 118.82
+  },
+  {
+   "word": "James",
+   "start": 118.82,
+   "end": 119.12
+  },
+  {
+   "word": "Webb",
+   "start": 119.12,
+   "end": 119.36
+  },
+  {
+   "word": "Space",
+   "start": 119.36,
+   "end": 119.7
+  },
+  {
+   "word": "Telescope",
+   "start": 119.7,
+   "end": 120.22
+  },
+  {
+   "word": "found",
+   "start": 120.22,
+   "end": 120.6
+  },
+  {
+   "word": "a",
+   "start": 120.6,
+   "end": 120.78
+  },
+  {
+   "word": "gas",
+   "start": 120.78,
+   "end": 121.04
+  },
+  {
+   "word": "called",
+   "start": 121.04,
+   "end": 121.28
+  },
+  {
+   "word": "hydrogen",
+   "start": 121.28,
+   "end": 121.78
+  },
+  {
+   "word": "sulfide",
+   "start": 121.78,
+   "end": 122.36
+  },
+  {
+   "word": "on",
+   "start": 122.36,
+   "end": 122.52
+  },
+  {
+   "word": "this",
+   "start": 122.52,
+   "end": 122.68
+  },
+  {
+   "word": "planet.",
+   "start": 122.68,
+   "end": 122.98
+  },
+  {
+   "word": "On",
+   "start": 123.52,
+   "end": 123.64
+  },
+  {
+   "word": "Earth,",
+   "start": 123.64,
+   "end": 123.98
+  },
+  {
+   "word": "that's",
+   "start": 124.28,
+   "end": 124.64
+  },
+  {
+   "word": "the",
+   "start": 124.64,
+   "end": 124.76
+  },
+  {
+   "word": "gas",
+   "start": 124.76,
+   "end": 125.02
+  },
+  {
+   "word": "that",
+   "start": 125.02,
+   "end": 125.22
+  },
+  {
+   "word": "smells",
+   "start": 125.22,
+   "end": 125.5
+  },
+  {
+   "word": "like",
+   "start": 125.5,
+   "end": 125.78
+  },
+  {
+   "word": "rotten",
+   "start": 125.78,
+   "end": 126.06
+  },
+  {
+   "word": "eggs.",
+   "start": 126.06,
+   "end": 126.46
+  },
+  {
+   "word": "But",
+   "start": 127.0,
+   "end": 127.2
+  },
+  {
+   "word": "remember,",
+   "start": 127.2,
+   "end": 127.62
+  },
+  {
+   "word": "nobody",
+   "start": 128.22,
+   "end": 128.42
+  },
+  {
+   "word": "has",
+   "start": 128.42,
+   "end": 128.72
+  },
+  {
+   "word": "actually",
+   "start": 128.72,
+   "end": 129.24
+  },
+  {
+   "word": "seen",
+   "start": 129.24,
+   "end": 129.7
+  },
+  {
+   "word": "glass",
+   "start": 129.7,
+   "end": 130.06
+  },
+  {
+   "word": "rain",
+   "start": 130.06,
+   "end": 130.36
+  },
+  {
+   "word": "there.",
+   "start": 130.36,
+   "end": 130.66
+  },
+  {
+   "word": "It",
+   "start": 131.04,
+   "end": 131.18
+  },
+  {
+   "word": "is",
+   "start": 131.18,
+   "end": 131.3
+  },
+  {
+   "word": "a",
+   "start": 131.3,
+   "end": 131.46
+  },
+  {
+   "word": "scientific",
+   "start": 131.46,
+   "end": 131.86
+  },
+  {
+   "word": "idea",
+   "start": 131.86,
+   "end": 132.38
+  },
+  {
+   "word": "based",
+   "start": 132.38,
+   "end": 132.74
+  },
+  {
+   "word": "on",
+   "start": 132.74,
+   "end": 133.04
+  },
+  {
+   "word": "telescope",
+   "start": 133.04,
+   "end": 133.46
+  },
+  {
+   "word": "data,",
+   "start": 133.46,
+   "end": 133.78
+  },
+  {
+   "word": "and",
+   "start": 134.14,
+   "end": 134.36
+  },
+  {
+   "word": "scientists",
+   "start": 134.36,
+   "end": 134.82
+  },
+  {
+   "word": "are",
+   "start": 134.82,
+   "end": 135.08
+  },
+  {
+   "word": "still",
+   "start": 135.08,
+   "end": 135.32
+  },
+  {
+   "word": "studying",
+   "start": 135.32,
+   "end": 135.74
+  },
+  {
+   "word": "it.",
+   "start": 135.74,
+   "end": 136.06
+  },
+  {
+   "word": "From",
+   "start": 136.48,
+   "end": 136.64
+  },
+  {
+   "word": "far",
+   "start": 136.64,
+   "end": 136.94
+  },
+  {
+   "word": "away,",
+   "start": 136.94,
+   "end": 137.34
+  },
+  {
+   "word": "it",
+   "start": 137.62,
+   "end": 137.74
+  },
+  {
+   "word": "looks",
+   "start": 137.74,
+   "end": 137.92
+  },
+  {
+   "word": "like",
+   "start": 137.92,
+   "end": 138.18
+  },
+  {
+   "word": "a",
+   "start": 138.18,
+   "end": 138.34
+  },
+  {
+   "word": "peaceful",
+   "start": 138.34,
+   "end": 138.82
+  },
+  {
+   "word": "blue",
+   "start": 138.82,
+   "end": 139.2
+  },
+  {
+   "word": "marble.",
+   "start": 139.2,
+   "end": 139.62
+  },
+  {
+   "word": "Up",
+   "start": 140.18,
+   "end": 140.34
+  },
+  {
+   "word": "close,",
+   "start": 140.34,
+   "end": 140.72
+  },
+  {
+   "word": "it",
+   "start": 141.22,
+   "end": 141.36
+  },
+  {
+   "word": "may",
+   "start": 141.36,
+   "end": 141.6
+  },
+  {
+   "word": "be",
+   "start": 141.6,
+   "end": 141.82
+  },
+  {
+   "word": "one",
+   "start": 141.82,
+   "end": 141.96
+  },
+  {
+   "word": "of",
+   "start": 141.96,
+   "end": 142.14
+  },
+  {
+   "word": "the",
+   "start": 142.14,
+   "end": 142.24
+  },
+  {
+   "word": "deadliest",
+   "start": 142.24,
+   "end": 142.76
+  },
+  {
+   "word": "places",
+   "start": 142.76,
+   "end": 143.2
+  },
+  {
+   "word": "we",
+   "start": 143.2,
+   "end": 143.56
+  },
+  {
+   "word": "know.",
+   "start": 143.56,
+   "end": 143.82
+  },
+  {
+   "word": "It",
+   "start": 144.32,
+   "end": 144.5
+  },
+  {
+   "word": "makes",
+   "start": 144.5,
+   "end": 144.68
+  },
+  {
+   "word": "you",
+   "start": 144.68,
+   "end": 144.92
+  },
+  {
+   "word": "realize",
+   "start": 144.92,
+   "end": 145.34
+  },
+  {
+   "word": "how",
+   "start": 145.34,
+   "end": 145.66
+  },
+  {
+   "word": "special",
+   "start": 145.66,
+   "end": 146.2
+  },
+  {
+   "word": "our",
+   "start": 146.2,
+   "end": 146.5
+  },
+  {
+   "word": "own",
+   "start": 146.5,
+   "end": 146.8
+  },
+  {
+   "word": "blue",
+   "start": 146.8,
+   "end": 147.02
+  },
+  {
+   "word": "planet",
+   "start": 147.02,
+   "end": 147.28
+  },
+  {
+   "word": "is.",
+   "start": 147.28,
+   "end": 147.76
+  },
+  {
+   "word": "Soft",
+   "start": 148.42,
+   "end": 148.64
+  },
+  {
+   "word": "rain,",
+   "start": 148.64,
+   "end": 149.02
+  },
+  {
+   "word": "fresh",
+   "start": 149.56,
+   "end": 149.86
+  },
+  {
+   "word": "air,",
+   "start": 149.86,
+   "end": 150.26
+  },
+  {
+   "word": "life",
+   "start": 150.8,
+   "end": 151.0
+  },
+  {
+   "word": "everywhere.",
+   "start": 151.0,
+   "end": 151.78
+  },
+  {
+   "word": "Out",
+   "start": 152.42,
+   "end": 152.6
+  },
+  {
+   "word": "there,",
+   "start": 152.6,
+   "end": 153.02
+  },
+  {
+   "word": "among",
+   "start": 153.22,
+   "end": 153.4
+  },
+  {
+   "word": "thousands",
+   "start": 153.4,
+   "end": 153.9
+  },
+  {
+   "word": "of",
+   "start": 153.9,
+   "end": 154.26
+  },
+  {
+   "word": "worlds,",
+   "start": 154.26,
+   "end": 154.62
+  },
+  {
+   "word": "we",
+   "start": 154.9,
+   "end": 155.1
+  },
+  {
+   "word": "have",
+   "start": 155.1,
+   "end": 155.26
+  },
+  {
+   "word": "not",
+   "start": 155.26,
+   "end": 155.58
+  },
+  {
+   "word": "found",
+   "start": 155.58,
+   "end": 155.92
+  },
+  {
+   "word": "another",
+   "start": 155.92,
+   "end": 156.26
+  },
+  {
+   "word": "place",
+   "start": 156.26,
+   "end": 156.64
+  },
+  {
+   "word": "like",
+   "start": 156.64,
+   "end": 156.9
+  },
+  {
+   "word": "home.",
+   "start": 156.9,
+   "end": 157.22
+  },
+  {
+   "word": "And",
+   "start": 157.84,
+   "end": 157.96
+  },
+  {
+   "word": "here's",
+   "start": 157.96,
+   "end": 158.28
+  },
+  {
+   "word": "the",
+   "start": 158.28,
+   "end": 158.42
+  },
+  {
+   "word": "thing.",
+   "start": 158.42,
+   "end": 158.66
+  },
+  {
+   "word": "Billions",
+   "start": 159.36,
+   "end": 159.66
+  },
+  {
+   "word": "of",
+   "start": 159.66,
+   "end": 159.88
+  },
+  {
+   "word": "planets,",
+   "start": 159.88,
+   "end": 160.28
+  },
+  {
+   "word": "and",
+   "start": 160.28,
+   "end": 160.82
+  },
+  {
+   "word": "not",
+   "start": 160.82,
+   "end": 161.06
+  },
+  {
+   "word": "one",
+   "start": 161.06,
+   "end": 161.36
+  },
+  {
+   "word": "of",
+   "start": 161.36,
+   "end": 161.5
+  },
+  {
+   "word": "them",
+   "start": 161.5,
+   "end": 161.68
+  },
+  {
+   "word": "can",
+   "start": 161.68,
+   "end": 161.92
+  },
+  {
+   "word": "care.",
+   "start": 161.92,
+   "end": 162.32
+  },
+  {
+   "word": "But",
+   "start": 162.88,
+   "end": 162.98
+  },
+  {
+   "word": "you",
+   "start": 162.98,
+   "end": 163.22
+  },
+  {
+   "word": "can.",
+   "start": 163.22,
+   "end": 163.58
+  },
+  {
+   "word": "Don't",
+   "start": 164.3,
+   "end": 164.64
+  },
+  {
+   "word": "ever",
+   "start": 164.64,
+   "end": 165.04
+  },
+  {
+   "word": "forget",
+   "start": 165.04,
+   "end": 165.46
+  },
+  {
+   "word": "how",
+   "start": 165.46,
+   "end": 165.76
+  },
+  {
+   "word": "special",
+   "start": 165.76,
+   "end": 166.18
+  },
+  {
+   "word": "that",
+   "start": 166.18,
+   "end": 166.5
+  },
+  {
+   "word": "makes",
+   "start": 166.5,
+   "end": 166.8
+  },
+  {
+   "word": "you.",
+   "start": 166.8,
+   "end": 167.2
+  },
+  {
+   "word": "Space",
+   "start": 167.92,
+   "end": 168.22
+  },
+  {
+   "word": "is",
+   "start": 168.22,
+   "end": 168.56
+  },
+  {
+   "word": "truly",
+   "start": 168.56,
+   "end": 169.18
+  },
+  {
+   "word": "amazing.",
+   "start": 169.18,
+   "end": 170.0
+  },
+  {
+   "word": "And",
+   "start": 170.74,
+   "end": 170.9
+  },
+  {
+   "word": "this",
+   "start": 170.9,
+   "end": 171.04
+  },
+  {
+   "word": "is",
+   "start": 171.04,
+   "end": 171.22
+  },
+  {
+   "word": "only",
+   "start": 171.22,
+   "end": 171.58
+  },
+  {
+   "word": "the",
+   "start": 171.58,
+   "end": 171.86
+  },
+  {
+   "word": "beginning.",
+   "start": 171.86,
+   "end": 172.18
+  }
+ ],
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 9.56,
+   "text": "the worst planet ever discovered. Glass rain, winds faster than sound, 1000 degrees,"
+  },
+  {
+   "start": 10.34,
+   "end": 16.58,
+   "text": "and it smells like rotten eggs. Welcome to the worst planet ever discovered."
+  },
+  {
+   "start": 17.08,
+   "end": 23.42,
+   "text": "Its name is HD 189733 b, and it is not in our solar system."
+  },
+  {
+   "start": 24.08,
+   "end": 27.3,
+   "text": "Our sun is just one of billions of stars in our galaxy."
+  },
+  {
+   "start": 27.86,
+   "end": 33.42,
+   "text": "Many of those stars have planets of their own. Scientists call them exoplanets. So far,"
+  },
+  {
+   "start": 33.66,
+   "end": 38.74,
+   "text": "they have found more than 6,000. But few are as terrifying as this one."
+  },
+  {
+   "start": 39.36,
+   "end": 44.36,
+   "text": "This planet is about 64 light years away. So how do we know anything about it?"
+  },
+  {
+   "start": 44.82,
+   "end": 49.9,
+   "text": "When the planet passes in front of its star, star light shines through its air. By studying"
+  },
+  {
+   "start": 49.9,
+   "end": 55.28,
+   "text": "that light, scientists can tell what the planet is made of. And what they found was shocking."
+  },
+  {
+   "start": 55.92,
+   "end": 61.8,
+   "text": "From far away, the planet looks deep blue, just like Earth. But it has no oceans."
+  },
+  {
+   "start": 62.64,
+   "end": 67.02,
+   "text": "Scientists think the blue color may come from tiny bits of glass floating in its clouds."
+  },
+  {
+   "start": 67.76,
+   "end": 71.02,
+   "text": "Glass is made from silica, the same material found in sand."
+  },
+  {
+   "start": 71.64,
+   "end": 77.42,
+   "text": "This planet is a giant, bigger than Jupiter, and it sits extremely close to its star."
+  },
+  {
+   "start": 77.94,
+   "end": 80.84,
+   "text": "One year there lasts only about two Earth days."
+  },
+  {
+   "start": 80.84,
+   "end": 86.84,
+   "text": "The temperature can reach around 1,000 degrees Celsius, hot enough to melt many metals."
+  },
+  {
+   "start": 87.56,
+   "end": 93.3,
+   "text": "One side always faces its star, so it is always day. The other side is always night."
+  },
+  {
+   "start": 93.88,
+   "end": 97.12,
+   "text": "That huge difference in heat creates monstrous winds,"
+  },
+  {
+   "start": 97.66,
+   "end": 101.14,
+   "text": "thousands of kilometers per hour, faster than the speed of sound."
+  },
+  {
+   "start": 101.66,
+   "end": 107.88,
+   "text": "Now put it all together. Glass in the clouds, winds faster than sound. Scientists think this"
+  },
+  {
+   "start": 107.88,
+   "end": 113.92,
+   "text": "could create rain made of glass, flying sideways. Standing there would be like being hit by millions"
+  },
+  {
+   "start": 113.92,
+   "end": 121.28,
+   "text": "of tiny blades. And the rotten egg smell? In 2024, the James Webb Space Telescope found a gas called"
+  },
+  {
+   "start": 121.28,
+   "end": 126.46,
+   "text": "hydrogen sulfide on this planet. On Earth, that's the gas that smells like rotten eggs."
+  },
+  {
+   "start": 127.0,
+   "end": 133.46,
+   "text": "But remember, nobody has actually seen glass rain there. It is a scientific idea based on telescope"
+  },
+  {
+   "start": 133.46,
+   "end": 139.62,
+   "text": "data, and scientists are still studying it. From far away, it looks like a peaceful blue marble."
+  },
+  {
+   "start": 140.18,
+   "end": 146.5,
+   "text": "Up close, it may be one of the deadliest places we know. It makes you realize how special our"
+  },
+  {
+   "start": 146.5,
+   "end": 154.62,
+   "text": "own blue planet is. Soft rain, fresh air, life everywhere. Out there, among thousands of worlds,"
+  },
+  {
+   "start": 154.9,
+   "end": 160.28,
+   "text": "we have not found another place like home. And here's the thing. Billions of planets,"
+  },
+  {
+   "start": 160.28,
+   "end": 167.2,
+   "text": "and not one of them can care. But you can. Don't ever forget how special that makes you."
+  },
+  {
+   "start": 167.92,
+   "end": 172.18,
+   "text": "Space is truly amazing. And this is only the beginning."
+  }
+ ]
+}

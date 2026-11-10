@@ -1,0 +1,27 @@
+{
+  "name": "glass-planet-toon",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "render:vertical": "node scripts/render.mjs vertical",
+    "render:wide": "node scripts/render.mjs wide",
+    "render:all": "node scripts/render.mjs all"
+  },
+  "dependencies": {
+    "@fontsource/fredoka": "^5.0.0",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.170.0",
+    "puppeteer": "^23.0.0",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0"
+  },
+  "optionalDependencies": {
+    "ffmpeg-static": "^5.2.0"
+  }
+}
