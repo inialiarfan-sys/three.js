@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="data:," />
+	<title>The Planet We Are Missing</title>
+</head>
+<body>
+	<div id="stage"><canvas id="view"></canvas></div>
+	<div id="controls">
+		<button id="play" type="button">▶ Play</button>
+		<input id="seek" type="range" min="0" max="10000" step="1" value="0" />
+		<span id="time">0:00.0 / 0:00</span>
+		<button id="mode" type="button">Vertical 9:16</button>
+		<span id="scene"></span>
+	</div>
+	<audio id="audio" preload="auto"></audio>
+	<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

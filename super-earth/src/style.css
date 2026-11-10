@@ -1,0 +1,12 @@
+html, body { margin: 0; height: 100%; background: #0b0f2a; color: #f4ecff; font-family: Fredoka, system-ui, sans-serif; }
+body { display: flex; flex-direction: column; }
+#stage { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 12px; }
+#view { max-width: 100%; max-height: 100%; border-radius: 10px; box-shadow: 0 8px 40px #0008; background: #0f1438; }
+#controls { display: flex; gap: 12px; align-items: center; padding: 10px 16px 16px; flex-wrap: wrap; }
+#controls button { font: 600 15px Fredoka, sans-serif; background: #8fa8ff; color: #10163d; border: 0; border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+#controls button:hover { background: #b6c6ff; }
+#seek { flex: 1; min-width: 160px; accent-color: #ffb27a; }
+#time, #scene { font: 500 14px Fredoka, sans-serif; opacity: .85; font-variant-numeric: tabular-nums; }
+body.capture #controls { display: none; }
+body.capture #stage { padding: 0; }
+body.capture #view { border-radius: 0; box-shadow: none; }

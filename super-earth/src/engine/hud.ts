@@ -172,3 +172,96 @@ export class Hud {
 		g.restore();
 	}
 }
+
+// ---------- extra cartoon overlays (super-Earth) ----------
+export function bigX( h: Hud, x: number, y: number, size: number, s: number ) {
+	if ( s <= 0 ) return;
+	const g = h.g; g.save(); g.translate( x, y ); g.scale( s, s ); g.rotate( 0.08 ); g.lineCap = 'round';
+	for ( const [ col, lw ] of [ [ PALETTE.ink, size * 0.3 ], [ '#ff5c7a', size * 0.18 ] ] as const ) {
+		g.strokeStyle = col; g.lineWidth = lw;
+		g.beginPath(); g.moveTo( - size, - size ); g.lineTo( size, size ); g.moveTo( size, - size ); g.lineTo( - size, size ); g.stroke();
+	}
+	g.restore();
+}
+
+/** Rounded pill label (tags like "Not confirmed"). */
+export function pill( h: Hud, str: string, x: number, y: number, size: number, s: number, fill = '#ffffff', bg = PALETTE.cobalt, icon = '' ) {
+	if ( s <= 0 ) return;
+	const g = h.g;
+	g.save(); g.translate( x, y ); g.scale( s, s ); g.rotate( - 0.03 );
+	g.font = `700 ${ size }px Fredoka, sans-serif`;
+	const text = icon ? icon + '  ' + str : str;
+	const w = g.measureText( text ).width + size * 1.2, hh = size * 1.6;
+	h.roundRect( - w / 2 + 6, - hh / 2 + 8, w, hh, hh / 2 ); g.fillStyle = PALETTE.ink; g.fill();
+	h.roundRect( - w / 2, - hh / 2, w, hh, hh / 2 ); g.fillStyle = bg; g.fill(); g.lineWidth = size * 0.14; g.strokeStyle = PALETTE.ink; g.stroke();
+	g.fillStyle = fill; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText( text, 0, size * 0.04 );
+	g.restore();
+}
+
+/** Rubber "SOLD OUT" stamp slammed onto the board. */
+export function stamp( h: Hud, str: string, x: number, y: number, size: number, t: number, t0: number ) {
+	if ( t < t0 ) return;
+	const k = clamp( ( t - t0 ) / 0.12 );
+	const s = 2.4 - 1.4 * k + ( k >= 1 ? 0.08 * Math.exp( - ( t - t0 - 0.12 ) * 10 ) * Math.cos( ( t - t0 ) * 40 ) : 0 );
+	const g = h.g; g.save(); g.translate( x, y ); g.rotate( - 0.18 ); g.scale( s, s ); g.globalAlpha = clamp( k * 1.5 );
+	g.font = `700 ${ size }px Fredoka, sans-serif`; g.textAlign = 'center'; g.textBaseline = 'middle';
+	const w = g.measureText( str ).width + size * 0.9, hh = size * 1.5;
+	g.lineWidth = size * 0.14; g.strokeStyle = '#ff4d6d'; h.roundRect( - w / 2, - hh / 2, w, hh, size * 0.25 ); g.stroke();
+	g.fillStyle = 'rgba(255,77,109,0.15)'; g.fill();
+	g.fillStyle = '#ff4d6d'; g.fillText( str, 0, size * 0.05 );
+	g.restore();
+}
+
+/** Cartoon sweat drops popping off a point. */
+export function sweat( h: Hud, x: number, y: number, size: number, t: number, amount = 1 ) {
+	if ( amount <= 0 ) return;
+	const g = h.g;
+	for ( let i = 0; i < 3; i ++ ) {
+		const ph = ( t * 1.6 + i / 3 ) % 1;
+		const dx = ( i - 1 ) * size * 1.4 + Math.sin( i * 2 ) * size * 0.3, dy = - size * 0.5 + ph * size * 2.2;
+		g.save(); g.globalAlpha = ( 1 - ph ) * amount; g.translate( x + dx * ( 0.6 + ph ), y + dy );
+		g.beginPath(); g.moveTo( 0, - size * 0.7 ); g.quadraticCurveTo( size * 0.55, 0, 0, size * 0.45 ); g.quadraticCurveTo( - size * 0.55, 0, 0, - size * 0.7 );
+		g.fillStyle = '#9fe0ff'; g.fill(); g.lineWidth = size * 0.14; g.strokeStyle = PALETTE.ink; g.stroke();
+		g.restore();
+	}
+}
+
+/** Cloud-shaped thought bubble (path only); draw callback paints inside. */
+export function thought( h: Hud, x: number, y: number, r: number, s: number, inner?: ( g: CanvasRenderingContext2D ) => void ) {
+	if ( s <= 0 ) return;
+	const g = h.g; g.save(); g.translate( x, y ); g.scale( s, s );
+	const lobes = 9;
+	const path = () => { g.beginPath(); for ( let i = 0; i < lobes; i ++ ) { const a = i / lobes * Math.PI * 2; g.moveTo( Math.cos( a ) * r * 0.85 + r * 0.32, Math.sin( a ) * r * 0.62 ); g.arc( Math.cos( a ) * r * 0.85, Math.sin( a ) * r * 0.62, r * 0.32, 0, 7 ); } g.ellipse( 0, 0, r * 0.88, r * 0.66, 0, 0, 7 ); };
+	g.lineWidth = r * 0.07; g.strokeStyle = PALETTE.ink; path(); g.stroke();
+	g.fillStyle = '#f4f2ff'; path(); g.fill();
+	// trailing dots
+	[ [ - r * 0.7, r * 0.85, r * 0.12 ], [ - r * 0.95, r * 1.12, r * 0.07 ] ].forEach( ( [ dx, dy, rr ] ) => { g.beginPath(); g.arc( dx, dy, rr, 0, 7 ); g.fillStyle = '#f4f2ff'; g.fill(); g.lineWidth = r * 0.05; g.stroke(); } );
+	if ( inner ) { g.save(); g.beginPath(); g.ellipse( 0, 0, r * 0.95, r * 0.75, 0, 0, 7 ); g.clip(); inner( g ); g.restore(); }
+	g.restore();
+}
+
+/** Route map: dashed path through stops with planet dots and labels. */
+export function routeMap( h: Hud, pts: { x: number; y: number; label: string; color: string }[], prog: number, s: number, size: number ) {
+	if ( s <= 0 ) return;
+	const g = h.g; g.save(); g.globalAlpha = clamp( s );
+	g.lineCap = 'round'; g.setLineDash( [ size * 0.5, size * 0.4 ] ); g.lineWidth = size * 0.18; g.strokeStyle = '#ffe07a';
+	g.beginPath();
+	const total = pts.length - 1;
+	for ( let i = 0; i < pts.length; i ++ ) {
+		const f = clamp( prog * total - ( i - 1 ) );
+		if ( i === 0 ) g.moveTo( pts[ 0 ].x, pts[ 0 ].y );
+		else if ( f > 0 ) g.lineTo( pts[ i - 1 ].x + ( pts[ i ].x - pts[ i - 1 ].x ) * f, pts[ i - 1 ].y + ( pts[ i ].y - pts[ i - 1 ].y ) * f );
+	}
+	g.stroke(); g.setLineDash( [] );
+	pts.forEach( ( p, i ) => {
+		const ps = popInOut( prog * total + 0.3, i, Infinity ) * s;
+		if ( ps <= 0 || i === 0 ) return;
+		g.save(); g.translate( p.x, p.y ); g.scale( ps, ps );
+		g.beginPath(); g.arc( 0, 0, size * 0.9, 0, 7 ); g.fillStyle = p.color; g.fill(); g.lineWidth = size * 0.16; g.strokeStyle = PALETTE.ink; g.stroke();
+		g.font = `700 ${ size * 0.8 }px Fredoka, sans-serif`; g.textAlign = 'center'; g.textBaseline = 'middle';
+		g.fillStyle = PALETTE.ink; g.fillText( String( i ), 0, size * 0.05 );
+		g.restore();
+		h.text( p.label, p.x, p.y + size * 1.9, size * 0.85, { scale: ps, fill: '#ffffff' } );
+	} );
+	g.restore();
+}
